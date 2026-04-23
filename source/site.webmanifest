@@ -1,0 +1,27 @@
+{
+    "name": "Siel Eolie",
+    "short_name": "Siel Eolie",
+    "description": "Impianti elettrici alle Isole Eolie — civili, industriali, quadri, sicurezza, antincendio, fotovoltaico.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0b4b66",
+    "icons": [
+        {
+            "src": "img/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "img/favicon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ]
+}
