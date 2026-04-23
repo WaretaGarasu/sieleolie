@@ -247,14 +247,66 @@ header::before {
     color: #fff;
 }
 
-/* Mobile toggle */
+/* Mobile toggle — animated hamburger ↔ X */
 .menu-toggle {
     display: none;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
     border: 1px solid var(--border);
     background: var(--bg);
-    border-radius: 8px;
-    padding: 8px;
+    border-radius: 10px;
+    padding: 0;
     color: var(--text);
+    cursor: pointer;
+    transition: background-color 140ms ease, border-color 140ms ease;
+}
+.menu-toggle:hover,
+.menu-toggle:focus-visible {
+    background: var(--primary-soft);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.menu-toggle-icon {
+    position: relative;
+    display: block;
+    width: 22px;
+    height: 16px;
+}
+.menu-toggle-icon span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transform-origin: 50% 50%;
+    transition:
+        top 200ms cubic-bezier(0.2, 0.9, 0.3, 1) 140ms,
+        transform 200ms cubic-bezier(0.2, 0.9, 0.3, 1),
+        opacity 140ms ease;
+}
+.menu-toggle-icon span:nth-child(1) { top: 0; }
+.menu-toggle-icon span:nth-child(2) { top: 7px; }
+.menu-toggle-icon span:nth-child(3) { top: 14px; }
+
+.menu-toggle[aria-expanded="true"] .menu-toggle-icon span {
+    transition:
+        top 200ms cubic-bezier(0.2, 0.9, 0.3, 1),
+        transform 200ms cubic-bezier(0.2, 0.9, 0.3, 1) 140ms,
+        opacity 140ms ease;
+}
+.menu-toggle[aria-expanded="true"] .menu-toggle-icon span:nth-child(1) {
+    top: 7px;
+    transform: rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] .menu-toggle-icon span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle[aria-expanded="true"] .menu-toggle-icon span:nth-child(3) {
+    top: 7px;
+    transform: rotate(-45deg);
 }
 
 /* ---------- Hero ---------- */
@@ -865,12 +917,20 @@ footer {
         right: 0;
         bottom: 0;
         z-index: 49;
-        background: var(--bg);
+        /* Frosted-glass backdrop — the page shows softly through the drawer */
+        background: rgba(255, 255, 255, 0.82);
+        backdrop-filter: saturate(180%) blur(16px);
+        -webkit-backdrop-filter: saturate(180%) blur(16px);
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-        padding: 16px 24px 32px;
-        border-top: 1px solid var(--border);
+        /* Safe-area insets so the drawer doesn't run under notches / home indicator */
+        padding:
+            16px
+            max(24px, env(safe-area-inset-right))
+            max(28px, env(safe-area-inset-bottom))
+            max(24px, env(safe-area-inset-left));
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
         transform: translateY(-8px);
         opacity: 0;
         visibility: hidden;
@@ -880,6 +940,12 @@ footer {
             opacity 180ms ease,
             transform 180ms ease,
             visibility 0s linear 180ms;
+    }
+    /* Fallback for browsers without backdrop-filter — keep drawer readable */
+    @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+        .nav-links {
+            background: var(--bg);
+        }
     }
     .nav-links.open {
         opacity: 1;
@@ -891,19 +957,50 @@ footer {
             visibility 0s linear 0s;
     }
     .nav-links a {
-        padding: 14px 0;
-        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        min-height: 48px;
+        padding: 14px 4px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         font-size: 1.05rem;
     }
-    .lang-toggle {
-        margin: 16px 0 0;
-        align-self: flex-start;
+    .nav-links a:last-of-type {
+        border-bottom: 0;
+    }
+
+    /* Lang toggle — full-width row pinned to the bottom of the drawer */
+    .nav-links .lang-toggle {
+        display: flex;
+        width: 100%;
+        margin: auto 0 0;
+        padding: 4px;
+        background: var(--bg);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+    }
+    .nav-links .lang-toggle button {
+        flex: 1;
+        padding: 12px 16px;
+        font-size: 0.9rem;
+        min-height: 44px;
     }
 
     html.menu-open,
     body.menu-open {
         overflow: hidden;
         overscroll-behavior: contain;
+    }
+
+    /* When the drawer is open, promote the header from sticky to fixed.
+       iOS Safari "un-sticks" sticky elements when overflow:hidden is set
+       on <html> — the header would fall back to its natural document
+       position (offscreen if you've scrolled), causing it to disappear.
+       Fixed is viewport-pinned, so the header stays put regardless. */
+    body.menu-open header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
     }
 
     .section {
