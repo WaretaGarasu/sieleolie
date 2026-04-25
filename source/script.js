@@ -300,6 +300,74 @@
             if (w > 820 && lastW <= 820 && isOpen()) closeMenu();
             lastW = w;
         });
+
+        // Swipe-down-to-close (mobile drawer)
+        // Tracks finger, lets the drawer follow downward, and closes past threshold.
+        const SWIPE_CLOSE_THRESHOLD = 80;   // px below which the drawer snaps back
+        const RUBBER_LIMIT = 200;           // px after which extra travel is damped
+
+        let touchStartY = null;
+        let touchDeltaY = 0;
+        let dragging = false;
+
+        function clearDrag() {
+            dragging = false;
+            touchStartY = null;
+            touchDeltaY = 0;
+            links.style.transition = '';
+            links.style.transform = '';
+        }
+
+        links.addEventListener('touchstart', function (ev) {
+            if (!isOpen()) return;
+            if (ev.touches.length !== 1) return;
+            // Don't hijack inner scroll: only start drag when drawer is at the top
+            if (links.scrollTop > 0) return;
+            touchStartY = ev.touches[0].clientY;
+            touchDeltaY = 0;
+            dragging = true;
+        }, { passive: true });
+
+        links.addEventListener('touchmove', function (ev) {
+            if (!dragging || touchStartY === null) return;
+            const dy = ev.touches[0].clientY - touchStartY;
+            if (dy <= 0) {
+                // Upward or no movement — stay put
+                links.style.transition = 'none';
+                links.style.transform = '';
+                touchDeltaY = 0;
+                return;
+            }
+            touchDeltaY = dy;
+            // Disable transition while finger drags
+            links.style.transition = 'none';
+            // Soft rubber-band past RUBBER_LIMIT
+            const damped = dy > RUBBER_LIMIT
+                ? RUBBER_LIMIT + (dy - RUBBER_LIMIT) * 0.4
+                : dy;
+            links.style.transform = 'translateY(' + damped + 'px)';
+        }, { passive: true });
+
+        function endDrag() {
+            if (!dragging) return;
+            const passedThreshold = touchDeltaY > SWIPE_CLOSE_THRESHOLD;
+            // Re-enable the CSS transition before changing classes
+            links.style.transition = '';
+            if (passedThreshold) {
+                // Clear inline transform so the closed-state CSS rule animates in
+                links.style.transform = '';
+                closeMenu();
+            } else {
+                // Snap back to open position
+                links.style.transform = '';
+            }
+            dragging = false;
+            touchStartY = null;
+            touchDeltaY = 0;
+        }
+
+        links.addEventListener('touchend', endDrag, { passive: true });
+        links.addEventListener('touchcancel', clearDrag, { passive: true });
     }
 
     // ------------------------------------------------------------------
