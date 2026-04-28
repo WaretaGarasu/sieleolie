@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Siel Eolie — impianti elettrici civili e industriali, quadri, sicurezza, antincendio e fotovoltaico. Lipari e tutto l'arcipelago eoliano, dal 1997." />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-title" content="Siel Eolie" />
+
+    <title data-i18n="meta.title">Siel Eolie — Impianti elettrici alle Isole Eolie</title>
+
+    <link rel="canonical" href="https://sieleolie.com/" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sieleolie.com/" />
+    <meta property="og:title" content="Siel Eolie — Impianti elettrici alle Isole Eolie" data-i18n="meta.ogTitle" />
+    <meta property="og:description" content="Impianti elettrici civili e industriali, quadri, sicurezza, antincendio e fotovoltaico. Lipari e tutto l'arcipelago eoliano, dal 1997." data-i18n="meta.ogDescription" />
+    <meta property="og:image" content="https://sieleolie.com/source/img/og-card.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Siel Eolie — Impianti elettrici alle Isole Eolie" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Siel Eolie — Impianti elettrici alle Isole Eolie" data-i18n="meta.ogTitle" />
+    <meta name="twitter:description" content="Impianti elettrici civili e industriali, quadri, sicurezza, antincendio e fotovoltaico. Lipari e tutto l'arcipelago eoliano, dal 1997." data-i18n="meta.ogDescription" />
+    <meta name="twitter:image" content="https://sieleolie.com/source/img/og-card.png" />
+
+    <!-- Favicon family -->
+    <link rel="icon" type="image/svg+xml" href="source/img/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="source/img/favicon-32.png" />
+    <link rel="icon" href="source/img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="source/img/apple-touch-icon.png" />
+    <link rel="manifest" href="source/site.webmanifest" />
+
+    <script>
+    (function () {
+        try {
+            var saved = localStorage.getItem('theme');
+            var systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            var theme = (saved === 'light' || saved === 'dark') ? saved : (systemDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    })();
+    </script>
+
+    <link rel="stylesheet" href="/source/style.min.css" />
+
+    <!-- LocalBusiness structured data (schema.org / Electrician) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Electrician",
+        "@id": "https://sieleolie.com/#business",
+        "name": "Siel Eolie",
+        "legalName": "SIEL S.R.L. DI A. & G.",
+        "alternateName": "Siel",
+        "description": "Impianti elettrici civili e industriali, quadri, sicurezza, antincendio e fotovoltaico. Lipari e tutto l'arcipelago eoliano, dal 1997.",
+        "url": "https://sieleolie.com/",
+        "image": "https://sieleolie.com/source/img/icon-512.png",
+        "logo": "https://sieleolie.com/source/img/icon-512.png",
+        "telephone": "+39 090 981 3440",
+        "email": "info@sieleolie.it",
+        "vatID": "02774390831",
+        "foundingDate": "1997",
+        "priceRange": "€€",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Corso Vittorio Emanuele II, 247",
+            "addressLocality": "Lipari",
+            "addressRegion": "ME",
+            "postalCode": "98055",
+            "addressCountry": "IT"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 38.4677,
+            "longitude": 14.9568
+        },
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "13:00"
+            },
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "15:00",
+                "closes": "19:00"
+            }
+        ],
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+39 090 981 3440",
+                "contactType": "customer service",
+                "areaServed": "IT",
+                "availableLanguage": ["Italian", "English"]
+            },
+            {
+                "@type": "ContactPoint",
+                "telephone": "+39 368 328 7898",
+                "contactType": "customer service",
+                "areaServed": "IT",
+                "availableLanguage": ["Italian", "English"]
+            }
+        ],
+        "areaServed": [
+            { "@type": "Place", "name": "Lipari" },
+            { "@type": "Place", "name": "Vulcano" },
+            { "@type": "Place", "name": "Salina" },
+            { "@type": "Place", "name": "Stromboli" },
+            { "@type": "Place", "name": "Panarea" },
+            { "@type": "Place", "name": "Filicudi" },
+            { "@type": "Place", "name": "Alicudi" }
+        ],
+        "knowsAbout": [
+            "Impianti elettrici civili",
+            "Impianti elettrici industriali",
+            "Quadri elettrici",
+            "Sistemi di sicurezza",
+            "Videosorveglianza",
+            "Antincendio",
+            "Reti idranti",
+            "Porte tagliafuoco",
+            "Impianti fotovoltaici",
+            "Automazioni",
+            "Reti wireless e hyperlan"
+        ],
+        "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "certification",
+            "name": "Certificazione ICIM",
+            "recognizedBy": { "@type": "Organization", "name": "ICIM S.p.A." },
+            "description": "Manutenzione di impianti antincendio, reti idranti e porte tagliafuoco (dal 2014)"
+        }
+    }
+    </script>
+</head>
+<body>
+
+<noscript>
+    <div class="noscript-banner">
+        <strong>JavaScript è disattivato.</strong> Alcune funzioni (cambio lingua, menu mobile, filtro portfolio) non sono disponibili.
+        Contattaci direttamente: <a href="tel:+393683287898">+39 368 328 7898</a> · <a href="mailto:info@sieleolie.it">info@sieleolie.it</a>
+        <br /><strong>JavaScript is disabled.</strong> Some features (language toggle, mobile menu, portfolio filter) are unavailable.
+        Contact us directly via phone or email.
+    </div>
+</noscript>
+
+<header>
+    <div class="container nav">
+        <a href="#" class="brand" aria-label="Siel Eolie — home">
+            <img src="source/img/favicon.svg" alt="" class="brand-mark" aria-hidden="true" width="38" height="38" />
+            <span class="brand-name">Siel <em>Eolie</em></span>
+        </a>
+
+        <button class="menu-toggle" aria-controls="navLinks" aria-expanded="false" aria-label="Apri menu">
+            <span class="menu-toggle-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+
+        <nav id="navLinks" class="nav-links" aria-label="Navigazione principale">
+            <a href="#chi-siamo" data-i18n="nav.about">Chi siamo</a>
+            <a href="#servizi" data-i18n="nav.services">Servizi</a>
+            <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+            <a href="#contatti" data-i18n="nav.contact">Contatti</a>
+
+            <div class="nav-controls">
+                <div class="lang-toggle" role="group" aria-label="Lingua / Language">
+                    <button type="button" data-lang="it" class="active" aria-pressed="true">IT</button>
+                    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+                <button type="button" class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Cambia tema" data-i18n-attr="aria-label:a11y.themeToggle">
+                    <span class="theme-toggle-icon" aria-hidden="true">
+                        <svg class="icon-sun" viewBox="0 0 24 24" focusable="false" width="18" height="18">
+                            <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8" />
+                            <path d="M12 1.8v3M12 19.2v3M1.8 12h3M19.2 12h3M4.2 4.2l2.2 2.2M17.6 17.6l2.2 2.2M4.2 19.8l2.2-2.2M17.6 6.4l2.2-2.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                        </svg>
+                        <svg class="icon-moon" viewBox="0 0 24 24" focusable="false" width="18" height="18">
+                            <path d="M20.3 14.1A8.6 8.6 0 1 1 9.9 3.7a7 7 0 1 0 10.4 10.4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <span class="sr-only" data-i18n="theme.toggleLabel">Cambia tema</span>
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <p class="eyebrow" data-i18n="hero.eyebrow">Lipari · Isole Eolie · dal 1997</p>
+            <h1 data-i18n="hero.title">Impianti elettrici alle Isole Eolie</h1>
+            <p class="hero-badge">
+                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="16" height="16">
+                    <path d="M12 2 4 5v7c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5l-8-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                    <path d="m8.5 12 2.5 2.5L16 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span data-i18n="hero.icimBadge">ICIM · unica azienda certificata a Lipari e isole minori · dal 2014</span>
+            </p>
+            <p class="hero-lead" data-i18n="hero.lead">
+                Progettiamo, installiamo e manteniamo impianti elettrici civili e industriali,
+                quadri, sistemi di sicurezza e antincendio, fotovoltaico. Con sede a Lipari,
+                raggiungiamo ogni angolo dell'arcipelago — da Vulcano a Stromboli, da Salina ad Alicudi.
+            </p>
+            <div class="hero-ctas">
+                <a href="#servizi" class="btn btn-primary" data-i18n="hero.ctaServices">Scopri i servizi</a>
+                <a href="#contatti" class="btn btn-secondary" data-i18n="hero.ctaContact">Contattaci</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHI SIAMO -->
+    <section id="chi-siamo" class="section">
+        <div class="container">
+            <p class="eyebrow" data-i18n="about.eyebrow">Chi siamo</p>
+            <h2 data-i18n="about.title">Una storia eoliana, dal 1997</h2>
+
+            <div class="about-grid">
+                <div class="about-block">
+                    <h3 data-i18n="about.companyTitle">L'azienda</h3>
+                    <p data-i18n="about.companyBody">
+                        Siel Eolie è un'impresa elettrica con sede a Lipari, attiva in tutto
+                        l'arcipelago. Realizziamo impianti civili e industriali, quadri elettrici su
+                        misura, automazioni e reti wireless, impianti fotovoltaici e sistemi
+                        antincendio. Lavoriamo per abitazioni private, alberghi e strutture
+                        ricettive, cantieri industriali, condomini ed enti pubblici — dal piccolo
+                        intervento al grande appalto, sempre con materiali di prima qualità e
+                        tempi di consegna rispettati. Il nostro team segue ogni lavoro dall'idea
+                        iniziale fino alla manutenzione programmata.
+                    </p>
+                </div>
+
+                <div class="about-block">
+                    <h3 data-i18n="about.historyTitle">La storia</h3>
+                    <p data-i18n="about.historyBody">
+                        Siel nasce a Lipari nel 2004, erede della S.I.EL snc avviata nel 1997 dal
+                        fondatore e attuale amministratore, Geometra Giuseppe Orto. In oltre
+                        vent'anni abbiamo visto cambiare le Eolie e siamo cresciuti insieme al
+                        territorio. Durante l'Emergenza Stromboli del 2003 abbiamo lavorato a
+                        fianco della Protezione Civile per portare impianti elettrici,
+                        videosorveglianza e cablaggio della rete LAN fin sul vulcano in attività —
+                        un intervento complesso, fatto di trasporti in elicottero, sentieri
+                        attrezzati e lavori in quota. Quello spirito — esserci dove serve,
+                        quando serve — ci guida ancora oggi.
+                    </p>
+                </div>
+
+                <div class="about-block">
+                    <h3 data-i18n="about.certTitle">Certificazioni</h3>
+                    <p data-i18n="about.certBody">
+                        Dal 2014 siamo certificati ICIM per la manutenzione di impianti antincendio,
+                        reti idranti e porte tagliafuoco: l'unica azienda autorizzata a fornire
+                        questi servizi a Lipari e nelle isole minori dell'arcipelago. La
+                        certificazione ICIM garantisce il rispetto delle normative UNI e la
+                        tracciabilità di ogni intervento — requisito fondamentale per alberghi,
+                        strutture pubbliche, condomini e qualsiasi attività soggetta a controllo
+                        antincendio.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIZI -->
+    <section id="servizi" class="section section-soft">
+        <div class="container">
+            <p class="eyebrow" data-i18n="services.eyebrow">Servizi</p>
+            <h2 data-i18n="services.title">Cosa facciamo</h2>
+            <p class="section-lead" data-i18n="services.lead">
+                Dalla progettazione alla manutenzione: un'unica impresa che segue ogni fase del
+                tuo impianto, con materiali di prima qualità e tempi di consegna rispettati.
+            </p>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="32" height="32"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
+                    </div>
+                    <h3 data-i18n="services.electric.title">Impianti elettrici</h3>
+                    <p data-i18n="services.electric.body">
+                        Impianti civili e industriali per abitazioni, alberghi, capannoni, uffici,
+                        scuole, condomini ed enti pubblici.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="32" height="32"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M7 8h3M14 8h3M7 12h3M14 12h3M7 16h3M14 16h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                    </div>
+                    <h3 data-i18n="services.panels.title">Quadri elettrici</h3>
+                    <p data-i18n="services.panels.body">
+                        Quadri elettrici su misura, progettati e cablati in officina. Tempi brevi,
+                        qualità alta, prezzi onesti.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="32" height="32"><path d="M12 2 4 5v7c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5l-8-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
+                    </div>
+                    <h3 data-i18n="services.security.title">Sistemi di sicurezza</h3>
+                    <p data-i18n="services.security.body">
+                        Antifurto, videosorveglianza, videocitofoni e antintrusione: tecnologia di
+                        ultima generazione per proteggere casa e lavoro.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="32" height="32"><path d="M12 2s4 4 4 8a4 4 0 0 1-8 0c0-2 1-4 2-5-1 2 0 3 1 3 0-3 1-6 1-6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /><path d="M7 16c0 3 2 5 5 5s5-2 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                    </div>
+                    <h3 data-i18n="services.fire.title">Antincendio</h3>
+                    <p data-i18n="services.fire.body">
+                        Manutenzione di estintori, reti idranti e porte tagliafuoco. Siamo l'unica
+                        azienda certificata ICIM a Lipari e nelle isole minori, dal 2014.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="32" height="32"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 17.5l2 2M4.5 19.5l2-2M17.5 6.5l2-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                    </div>
+                    <h3 data-i18n="services.solar.title">Fotovoltaico</h3>
+                    <p data-i18n="services.solar.body">
+                        Progettazione e installazione di impianti fotovoltaici chiavi in mano,
+                        per produrre energia pulita e ridurre la bolletta.
+                    </p>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="32" height="32"><path d="M2 12a10 10 0 0 1 20 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /><path d="M5 12a7 7 0 0 1 14 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /><path d="M8 12a4 4 0 0 1 8 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /><circle cx="12" cy="12" r="1.3" fill="currentColor" /></svg>
+                    </div>
+                    <h3 data-i18n="services.automation.title">Automazioni & reti</h3>
+                    <p data-i18n="services.automation.body">
+                        Automazioni di cancelli e serrande, reti Wi-Fi e hyperlan, cablaggi
+                        strutturati e assistenza hardware.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="section">
+        <div class="container">
+            <p class="eyebrow" data-i18n="portfolio.eyebrow">Portfolio</p>
+            <h2 data-i18n="portfolio.title">Alcune delle nostre realizzazioni</h2>
+            <p class="section-lead" data-i18n="portfolio.lead">
+                Dalle abitazioni private ai cantieri sul vulcano — ogni progetto racconta
+                oltre vent'anni di esperienza sul campo.
+            </p>
+
+            <div class="portfolio-filters" role="tablist" aria-label="Filtri portfolio">
+                <button type="button" class="filter active" data-filter="all" role="tab" aria-selected="true" data-i18n="portfolio.tabs.all">Tutti</button>
+                <button type="button" class="filter" data-filter="civile" role="tab" aria-selected="false" data-i18n="portfolio.tabs.civile">Impianti civili</button>
+                <button type="button" class="filter" data-filter="industriale" role="tab" aria-selected="false" data-i18n="portfolio.tabs.industriale">Impianti industriali</button>
+                <button type="button" class="filter" data-filter="quadro" role="tab" aria-selected="false" data-i18n="portfolio.tabs.quadro">Quadri elettrici</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <figure class="portfolio-item" data-cat="quadro">
+                    <img src="source/img/portfolio/quadro_01.webp" alt="Quadro elettrico BTicino moderno con multimetro e interruttori differenziali" loading="lazy" decoding="async" />
+                </figure>
+                <figure class="portfolio-item" data-cat="quadro">
+                    <img src="source/img/portfolio/quadro_02.webp" alt="Quadro di piano con multimetro contatore e interruttori etichettati" loading="lazy" decoding="async" />
+                </figure>
+                <figure class="portfolio-item" data-cat="quadro">
+                    <img src="source/img/portfolio/quadro_03.webp" alt="Quadro industriale con teleruttori e relè su piastra rossa" loading="lazy" decoding="async" />
+                </figure>
+                <figure class="portfolio-item" data-cat="quadro">
+                    <img src="source/img/portfolio/quadro_04.webp" alt="Quadro elettrico civile con interruttori differenziali" loading="lazy" decoding="async" />
+                </figure>
+
+                <figure class="portfolio-item" data-cat="industriale">
+                    <img src="source/img/portfolio/industriale_01.webp" alt="Squadra di lavoro con elicottero Lama SA 315B in quota" loading="lazy" decoding="async" />
+                </figure>
+                <figure class="portfolio-item" data-cat="industriale">
+                    <img src="source/img/portfolio/industriale_02.webp" alt="Tecnico in arrampicata con scala su terreno vulcanico" loading="lazy" decoding="async" />
+                </figure>
+                <figure class="portfolio-item" data-cat="industriale">
+                    <img src="source/img/portfolio/industriale_03.webp" alt="Elicottero in volo con carico sospeso per trasporto materiali" loading="lazy" decoding="async" />
+                </figure>
+                <figure class="portfolio-item" data-cat="industriale">
+                    <img src="source/img/portfolio/industriale_04.webp" alt="Tecnico su sentiero attrezzato con corde fisse su roccia vulcanica" loading="lazy" decoding="async" />
+                </figure>
+                <figure class="portfolio-item" data-cat="industriale">
+                    <img src="source/img/portfolio/industriale_05.webp" alt="Intervento su antenna e palo radio con tiranti" loading="lazy" decoding="async" />
+                </figure>
+                <figure class="portfolio-item" data-cat="industriale">
+                    <img src="source/img/portfolio/industriale_06.webp" alt="Posa cavi elettrici in trincea su costone con vista mare" loading="lazy" decoding="async" />
+                </figure>
+                <figure class="portfolio-item" data-cat="industriale">
+                    <img src="source/img/portfolio/industriale_07.webp" alt="Impianto elettrico a servizio di cava e impianto di frantumazione" loading="lazy" decoding="async" />
+                </figure>
+
+                <figure class="portfolio-item" data-cat="civile">
+                    <img src="source/img/portfolio/civile_01.webp" alt="Quadro elettrico residenziale BTicino con circuiti etichettati (forno, lavastoviglie, piastra, luci)" loading="lazy" decoding="async" />
+                </figure>
+                <figure class="portfolio-item" data-cat="civile">
+                    <img src="source/img/portfolio/civile_02.webp" alt="Scavo e posa cavi elettrici di alimentazione edificio residenziale" loading="lazy" decoding="async" />
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-strip" aria-labelledby="ctaTitle">
+        <div class="container cta-inner">
+            <div class="cta-text">
+                <p class="eyebrow cta-eyebrow" data-i18n="cta.eyebrow">Lavoriamo insieme</p>
+                <h2 id="ctaTitle" data-i18n="cta.title">Hai un progetto in mente?</h2>
+                <p class="cta-body" data-i18n="cta.body">Per qualsiasi informazione, sopralluogo o richiesta di preventivo, contattaci: ti risponderemo nel più breve tempo possibile.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:+390909813440" class="btn btn-primary">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18">
+                        <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.3 1.2.4 2.4.6 3.7.6.5 0 1 .4 1 1V20c0 .6-.5 1-1 1C10.6 21 3 13.4 3 4c0-.5.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.7.1.3 0 .7-.3 1l-2.2 2.1z" fill="currentColor" />
+                    </svg>
+                    <span data-i18n="cta.phone">Chiamaci</span>
+                </a>
+                <a href="https://wa.me/393683287898" class="btn btn-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18">
+                        <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.8-2-.2-.5-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.1 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.2-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.2A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z" fill="currentColor"/>
+                    </svg>
+                    <span data-i18n="cta.whatsapp">WhatsApp</span>
+                </a>
+                <a href="mailto:info@sieleolie.it" class="btn btn-secondary">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18">
+                        <path d="M4 6h16c.6 0 1 .4 1 1v10c0 .6-.4 1-1 1H4c-.6 0-1-.4-1-1V7c0-.6.4-1 1-1zm1 2v.4l7 4.6 7-4.6V8H5zm14 1.8l-6.5 4.3a1 1 0 0 1-1 0L5 9.8V16h14V9.8z" fill="currentColor" />
+                    </svg>
+                    <span data-i18n="cta.email">Scrivici</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" class="section section-soft">
+        <div class="container">
+            <p class="eyebrow" data-i18n="contact.eyebrow">Contatti</p>
+            <h2 data-i18n="contact.title">Parliamone</h2>
+            <p class="section-lead" data-i18n="contact.lead">
+                Contattaci per un preventivo, una consulenza o un intervento di manutenzione.
+                Siamo a Lipari e raggiungiamo tutte le Isole Eolie.
+            </p>
+
+            <div class="contact-grid">
+
+                <ul class="contact-info">
+                    <li>
+                        <div class="ci-icon" aria-hidden="true">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8z" fill="none" stroke="currentColor" stroke-width="1.8" /><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8" /></svg>
+                        </div>
+                        <div>
+                            <div class="ci-label" data-i18n="contact.addressLabel">Indirizzo</div>
+                            <div class="ci-value">Corso Vittorio Emanuele II, 247<br />98055 Lipari (ME)</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ci-icon" aria-hidden="true">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><path d="M6 4h4l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
+                        </div>
+                        <div>
+                            <div class="ci-label" data-i18n="contact.phoneFixedLabel">Telefono</div>
+                            <div class="ci-value"><a href="tel:+390909813440">090 981 3440</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ci-icon" aria-hidden="true">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M10 18h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                        </div>
+                        <div>
+                            <div class="ci-label" data-i18n="contact.phoneLabel">Cellulare</div>
+                            <div class="ci-value"><a href="tel:+393683287898">+39 368 328 7898</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ci-icon" aria-hidden="true">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8" /></svg>
+                        </div>
+                        <div>
+                            <div class="ci-label">Email</div>
+                            <div class="ci-value"><a href="mailto:info@sieleolie.it">info@sieleolie.it</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ci-icon" aria-hidden="true">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M7 5V3h10v2M7 15h10M7 19h6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" /></svg>
+                        </div>
+                        <div>
+                            <div class="ci-label">PEC</div>
+                            <div class="ci-value"><a href="mailto:info@pec.sieleolie.com">info@pec.sieleolie.com</a></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ci-icon" aria-hidden="true">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><rect x="6" y="4" width="12" height="6" fill="none" stroke="currentColor" stroke-width="1.8" /><rect x="3" y="10" width="18" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.8" /><rect x="6" y="18" width="12" height="3" fill="none" stroke="currentColor" stroke-width="1.8" /></svg>
+                        </div>
+                        <div>
+                            <div class="ci-label">Fax</div>
+                            <div class="ci-value">1784413669</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ci-icon" aria-hidden="true">
+                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" /></svg>
+                        </div>
+                        <div>
+                            <div class="ci-label" data-i18n="contact.hoursLabel">Orari</div>
+                            <div class="ci-value" data-i18n="contact.hoursValue">Lun–Ven 09:00–13:00 / 15:00–19:00</div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="map-wrapper">
+                    <iframe
+                        title="Mappa — Siel Eolie, Lipari"
+                        src="https://www.google.com/maps?q=Corso+Vittorio+Emanuele+II+247,+98055+Lipari+ME&output=embed"
+                        width="600"
+                        height="450"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container footer-content">
+        <div class="footer-top">
+            <div class="footer-legal">
+                <p class="footer-legal-title" data-i18n="footer.legalTitle">Dati societari</p>
+                <p class="footer-legal-item" data-i18n="footer.legalCompany">Ragione Sociale: SIEL S.R.L. DI A. &amp; G.</p>
+                <p class="footer-legal-item" data-i18n="footer.legalVat">P.IVA: 02774390831</p>
+                <p class="footer-legal-item" data-i18n="footer.legalRea">REA: ME - 191994</p>
+            </div>
+            <div class="footer-brand">
+                <p class="footer-brand-name"><strong data-i18n="brand.name">Siel Eolie</strong></p>
+                <p class="footer-brand-tagline" data-i18n="footer.tagline">Impianti elettrici alle Isole Eolie</p>
+                <p class="footer-brand-since" data-i18n="footer.since">Alle Isole Eolie dal 1997</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-copy">
+                © <span id="year"></span>
+                <span data-i18n="brand.name">Siel Eolie</span>.
+                <span data-i18n="footer.rights">Tutti i diritti riservati.</span>
+            </div>
+            <div class="footer-signature">
+                <span data-i18n="footer.built">Fatto con</span>
+                <span class="heart" aria-hidden="true">❤️</span>
+                <span data-i18n="footer.builtBy">da</span>
+                <a href="https://waretagarasu.com" class="signature-link" target="_blank" rel="noopener author" aria-label="WaretaGarasu — portfolio"><strong class="signature">WaretaGarasu</strong></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<button type="button" class="to-top" id="toTop" aria-label="Torna su" data-i18n-attr="aria-label:a11y.toTop" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="20" height="20">
+        <path d="M12 5l-7 7h4v7h6v-7h4z" fill="currentColor" />
+    </svg>
+</button>
+
+<script src="/source/script.min.js"></script>
+</body>
+</html>

@@ -92,6 +92,9 @@
             "footer.legalRea": "REA: ME - 191994",
 
             "a11y.toTop": "Torna su",
+            "a11y.themeToggle": "Cambia tema",
+            "theme.toggleShort": "Tema",
+            "theme.toggleLabel": "Cambia tema",
 
             "nf.metaTitle": "Pagina non trovata — Siel Eolie",
             "nf.title": "Pagina non trovata",
@@ -179,6 +182,9 @@
             "footer.legalRea": "REA (Business registry): ME - 191994",
 
             "a11y.toTop": "Back to top",
+            "a11y.themeToggle": "Switch theme",
+            "theme.toggleShort": "Theme",
+            "theme.toggleLabel": "Switch theme",
 
             "nf.metaTitle": "Page not found — Siel Eolie",
             "nf.title": "Page not found",
@@ -239,6 +245,9 @@
             btn.classList.toggle('active', active);
             btn.setAttribute('aria-pressed', active ? 'true' : 'false');
         });
+        document.querySelectorAll('.lang-toggle').forEach(function (toggle) {
+            toggle.setAttribute('data-active-lang', lang === 'en' ? 'en' : 'it');
+        });
 
         // Persist
         try {
@@ -253,6 +262,70 @@
         } catch (e) { /* ignore */ }
         // Default: Italian (canonical)
         return 'it';
+    }
+
+    // ------------------------------------------------------------------
+    // Theme preference (system default + persisted override)
+    // ------------------------------------------------------------------
+    const THEME_KEY = 'theme';
+    let systemThemeMedia = null;
+
+    function isValidTheme(theme) {
+        return theme === 'light' || theme === 'dark';
+    }
+
+    function systemTheme() {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    function savedTheme() {
+        try {
+            const value = localStorage.getItem(THEME_KEY);
+            return isValidTheme(value) ? value : null;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function resolvedTheme() {
+        return savedTheme() || systemTheme();
+    }
+
+    function applyTheme(theme) {
+        const resolved = isValidTheme(theme) ? theme : 'light';
+        document.documentElement.setAttribute('data-theme', resolved);
+        document.querySelectorAll('#themeToggle').forEach(function (btn) {
+            const isDark = resolved === 'dark';
+            btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        });
+    }
+
+    function initThemeToggle() {
+        const toggle = document.getElementById('themeToggle');
+        if (!toggle) return;
+
+        applyTheme(resolvedTheme());
+
+        toggle.addEventListener('click', function () {
+            const current = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+            const next = current === 'dark' ? 'light' : 'dark';
+            applyTheme(next);
+            try {
+                localStorage.setItem(THEME_KEY, next);
+            } catch (e) { /* private mode / blocked */ }
+        });
+
+        systemThemeMedia = window.matchMedia('(prefers-color-scheme: dark)');
+        const handleSystemThemeChange = function () {
+            if (!savedTheme()) {
+                applyTheme(systemTheme());
+            }
+        };
+        if (typeof systemThemeMedia.addEventListener === 'function') {
+            systemThemeMedia.addEventListener('change', handleSystemThemeChange);
+        } else if (typeof systemThemeMedia.addListener === 'function') {
+            systemThemeMedia.addListener(handleSystemThemeChange);
+        }
     }
 
     // ------------------------------------------------------------------
@@ -459,7 +532,9 @@
     // Boot
     // ------------------------------------------------------------------
     function boot() {
+        applyTheme(resolvedTheme());
         initYear();
+        initThemeToggle();
         initLangToggle();
         initMobileMenu();
         initPortfolioFilter();
