@@ -35,6 +35,7 @@
     <link rel="stylesheet" href="/source/style.min.css" />
 </head>
 <body>
+<a class="skip-link" href="#mainContent" data-i18n="a11y.skipToMain">Vai al contenuto principale</a>
 <header>
     <div class="container nav">
         <a href="/" class="brand" aria-label="Siel Eolie - home">
@@ -42,7 +43,7 @@
             <span class="brand-name">Siel <em>Eolie</em></span>
         </a>
 
-        <button class="menu-toggle" aria-controls="navLinks" aria-expanded="false" aria-label="Apri menu">
+        <button class="menu-toggle" aria-controls="navLinks" aria-expanded="false" aria-label="Apri menu" data-i18n-attr="aria-label:a11y.menuOpen">
             <span class="menu-toggle-icon" aria-hidden="true">
                 <span></span>
                 <span></span>
@@ -79,19 +80,19 @@
     </div>
 </header>
 
-<main>
+<main id="mainContent">
     <section class="section">
         <div class="container">
             <p class="eyebrow" data-i18n="cert.eyebrow">Certificazioni</p>
             <h1 data-i18n="cert.title">Certificazioni e abilitazioni</h1>
-            <p class="section-lead cert-section-lead" data-i18n="cert.lead">Le certificazioni garantiscono tracciabilita, conformita normativa e manutenzioni eseguite secondo standard verificabili.</p>
+            <p class="section-lead cert-section-lead" data-i18n="cert.lead">Le certificazioni garantiscono tracciabilita, conformita normativa e manutenzioni eseguite secondo standard verificabili. Questa sezione raccoglie i documenti disponibili e riflette il nostro percorso di miglioramento continuo.</p>
 
             <div class="services-grid certifications-grid">
                 <article class="service-card cert-card">
                     <div class="service-icon" aria-hidden="true">
                         <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="32" height="32"><path d="M12 2 4 5v7c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5l-8-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
                     </div>
-                    <h2 data-i18n="cert.icim.title">Certificazione ICIM</h2>
+                    <h3 data-i18n="cert.icim.title">Certificazione ICIM</h3>
                     <p data-i18n="cert.icim.body">Dal 2014 siamo certificati per la manutenzione di impianti antincendio, reti idranti e porte tagliafuoco. A Lipari e nelle isole minori siamo l'unica azienda abilitata per questi servizi.</p>
                     <p class="cert-active-badge" data-i18n="cert.icim.tag">Attiva dal 2014</p>
                     <div class="cert-doc-actions cert-doc-actions-inline">
@@ -104,30 +105,26 @@
                     <div class="service-icon" aria-hidden="true">
                         <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="32" height="32"><path d="M12 2 4 5v7c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5l-8-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
                     </div>
-                    <h2 data-i18n="cert.rina.title">RINA Certification</h2>
+                    <h3 data-i18n="cert.rina.title">RINA Certification</h3>
                     <p data-i18n="cert.rina.body">Siamo abilitati alla fornitura dei seguenti servizi a navi e altre unita classificate RINA: ispezioni e manutenzione di apparecchi ed impianti antincendio, limitatamente ad impianti fissi a CO2, estintori portatili ed estintori di grande capacita.</p>
                     <p class="cert-active-badge cert-active-badge-prominent" data-i18n="cert.rina.tag">Attiva dal 2019</p>
                     <div class="cert-doc-actions cert-doc-actions-inline">
                         <div class="cert-view-split" data-cert-menu>
                             <a href="/source/docs/certifications/rina-certification-2025.pdf" class="btn btn-primary cert-view-main" target="_blank" rel="noopener" data-i18n="cert.viewFile">Visualizza certificazione</a>
                             <button type="button" class="btn btn-primary cert-view-toggle" data-cert-menu-toggle aria-haspopup="true" aria-expanded="false" aria-controls="rinaCertMenu" data-i18n-attr="aria-label:cert.rina.menuA11y">
-                                <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" focusable="false">
-                                    <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <span class="cert-view-caret" aria-hidden="true">▾</span>
                             </button>
-                            <div class="cert-doc-popover" id="rinaCertMenu" role="menu" hidden>
-                                <a href="/source/docs/certifications/rina-certification-2019.pdf" class="cert-doc-popover-link" target="_blank" rel="noopener" role="menuitem" data-i18n="cert.rina.prevView">Visualizza certificazione 2019</a>
+                            <div class="cert-doc-popover" id="rinaCertMenu" hidden>
+                                <a href="/source/docs/certifications/rina-certification-2019.pdf" class="cert-doc-popover-link" target="_blank" rel="noopener" data-i18n="cert.rina.prevView">Visualizza certificazione 2019</a>
                             </div>
                         </div>
                         <div class="cert-view-split cert-view-split-secondary" data-cert-menu>
                             <a href="/source/docs/certifications/rina-certification-2025.pdf" class="btn btn-secondary cert-view-main" download="rina-certification-2025.pdf" data-i18n="cert.downloadFile">Scarica</a>
                             <button type="button" class="btn btn-secondary cert-view-toggle" data-cert-menu-toggle aria-haspopup="true" aria-expanded="false" aria-controls="rinaCertDownloadMenu" data-i18n-attr="aria-label:cert.rina.downloadMenuA11y">
-                                <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16" focusable="false">
-                                    <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <span class="cert-view-caret" aria-hidden="true">▾</span>
                             </button>
-                            <div class="cert-doc-popover cert-doc-popover-right" id="rinaCertDownloadMenu" role="menu" hidden>
-                                <a href="/source/docs/certifications/rina-certification-2019.pdf" class="cert-doc-popover-link" download="rina-certification-2019.pdf" role="menuitem" data-i18n="cert.rina.prevDownload">Scarica certificazione 2019</a>
+                            <div class="cert-doc-popover cert-doc-popover-right" id="rinaCertDownloadMenu" hidden>
+                                <a href="/source/docs/certifications/rina-certification-2019.pdf" class="cert-doc-popover-link" download="rina-certification-2019.pdf" data-i18n="cert.rina.prevDownload">Scarica certificazione 2019</a>
                             </div>
                         </div>
                     </div>
@@ -137,7 +134,7 @@
                     <div class="service-icon" aria-hidden="true">
                         <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="32" height="32"><path d="M4 16.5V20h3.5l9.9-9.9-3.5-3.5L4 16.5zm13.6-11.2a1 1 0 0 1 1.4 0l1.7 1.7a1 1 0 0 1 0 1.4l-1.2 1.2-3.5-3.5 1.6-1.6z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
                     </div>
-                    <h2 data-i18n="cert.more.title">Percorso di crescita continua</h2>
+                    <h3 data-i18n="cert.more.title">Percorso di crescita continua</h3>
                     <p data-i18n="cert.more.body">Aggiorniamo costantemente questa sezione con nuove certificazioni, per garantire standard sempre piu alti e servizi sempre piu qualificati.</p>
                 </article>
             </div>

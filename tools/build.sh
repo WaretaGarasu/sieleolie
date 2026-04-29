@@ -13,7 +13,7 @@
 #     fonts/, img/, site.webmanifest    binary assets (no build)
 #
 #   index.html, 404.html, projects/*.html   ← BUILT (minified, served live)
-#   source/style.min.css, source/script.min.js  ← BUILT outputs
+#   source/style.min.css, source/script.min.js  ← BUILT outputs (stable names, no hashing)
 #
 # WORKFLOW
 #   * Make all edits inside source/.

@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="/source/style.min.css" />
 </head>
 <body>
+<a class="skip-link" href="#mainContent" data-i18n="a11y.skipToMain">Vai al contenuto principale</a>
 
 <header>
     <div class="container nav">
@@ -44,7 +45,7 @@
             <span class="brand-name">Siel <em>Eolie</em></span>
         </a>
 
-        <button class="menu-toggle" aria-controls="navLinks" aria-expanded="false" aria-label="Apri menu">
+        <button class="menu-toggle" aria-controls="navLinks" aria-expanded="false" aria-label="Apri menu" data-i18n-attr="aria-label:a11y.menuOpen">
             <span class="menu-toggle-icon" aria-hidden="true">
                 <span></span>
                 <span></span>
@@ -81,7 +82,7 @@
     </div>
 </header>
 
-<main class="not-found">
+<main id="mainContent" class="not-found">
     <div class="not-found-inner">
         <p class="code" aria-hidden="true">404</p>
         <h1 data-i18n="nf.title">Pagina non trovata</h1>

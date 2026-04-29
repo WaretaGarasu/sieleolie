@@ -94,6 +94,9 @@
 
             "a11y.toTop": "Torna su",
             "a11y.themeToggle": "Cambia tema",
+            "a11y.menuOpen": "Apri menu",
+            "a11y.menuClose": "Chiudi menu",
+            "a11y.skipToMain": "Vai al contenuto principale",
             "theme.toggleShort": "Tema",
             "theme.toggleLabel": "Cambia tema",
 
@@ -213,6 +216,9 @@
 
             "a11y.toTop": "Back to top",
             "a11y.themeToggle": "Switch theme",
+            "a11y.menuOpen": "Open menu",
+            "a11y.menuClose": "Close menu",
+            "a11y.skipToMain": "Skip to main content",
             "theme.toggleShort": "Theme",
             "theme.toggleLabel": "Switch theme",
 
@@ -311,6 +317,8 @@
         try {
             localStorage.setItem('lang', lang);
         } catch (e) { /* private mode / blocked */ }
+
+        updateMenuToggleA11y(lang);
     }
 
     function initialLanguage() {
@@ -349,12 +357,35 @@
         return savedTheme() || systemTheme();
     }
 
+    function updateThemeColorMeta(theme) {
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (!meta) return;
+        const color = theme === 'dark' ? '#0f172a' : '#ffffff';
+        meta.setAttribute('content', color);
+    }
+
     function applyTheme(theme) {
         const resolved = isValidTheme(theme) ? theme : 'light';
         document.documentElement.setAttribute('data-theme', resolved);
+        updateThemeColorMeta(resolved);
         document.querySelectorAll('#themeToggle').forEach(function (btn) {
             const isDark = resolved === 'dark';
             btn.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        });
+    }
+
+    function currentLanguage() {
+        const lang = document.documentElement.getAttribute('lang');
+        return translations[lang] ? lang : 'it';
+    }
+
+    function updateMenuToggleA11y(lang) {
+        const useLang = translations[lang] ? lang : currentLanguage();
+        const dict = translations[useLang] || translations.it;
+        document.querySelectorAll('.menu-toggle').forEach(function (btn) {
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            const label = expanded ? dict["a11y.menuClose"] : dict["a11y.menuOpen"];
+            btn.setAttribute('aria-label', label);
         });
     }
 
@@ -399,12 +430,14 @@
             toggle.setAttribute('aria-expanded', 'true');
             document.documentElement.classList.add('menu-open');
             document.body.classList.add('menu-open');
+            updateMenuToggleA11y(currentLanguage());
         }
         function closeMenu() {
             links.classList.remove('open');
             toggle.setAttribute('aria-expanded', 'false');
             document.documentElement.classList.remove('menu-open');
             document.body.classList.remove('menu-open');
+            updateMenuToggleA11y(currentLanguage());
         }
         function isOpen() {
             return links.classList.contains('open');
@@ -610,34 +643,50 @@
         if (!menus.length) return;
 
         let openMenu = null;
-        let closeTimer = null;
+        const closeTimers = new WeakMap();
 
-        function close(menu) {
+        function clearCloseTimer(menu) {
+            const timerId = closeTimers.get(menu);
+            if (!timerId) return;
+            window.clearTimeout(timerId);
+            closeTimers.delete(menu);
+        }
+
+        function close(menu, immediate) {
             const target = menu || openMenu;
             if (!target) return;
             const toggle = target.querySelector('[data-cert-menu-toggle]');
             const panel = target.querySelector('.cert-doc-popover');
             if (!toggle || !panel) return;
 
+            clearCloseTimer(target);
             target.classList.remove('is-open');
             toggle.setAttribute('aria-expanded', 'false');
-            if (closeTimer) window.clearTimeout(closeTimer);
-            closeTimer = window.setTimeout(function () {
+            if (immediate) {
                 panel.hidden = true;
-            }, 180);
+            } else {
+                const timerId = window.setTimeout(function () {
+                    panel.hidden = true;
+                    closeTimers.delete(target);
+                }, 180);
+                closeTimers.set(target, timerId);
+            }
             if (openMenu === target) openMenu = null;
         }
 
+        function closeOthers(exceptMenu) {
+            menus.forEach(function (menu) {
+                if (menu !== exceptMenu) close(menu, true);
+            });
+        }
+
         function open(menu) {
-            if (openMenu && openMenu !== menu) close(openMenu);
+            closeOthers(menu);
             const toggle = menu.querySelector('[data-cert-menu-toggle]');
             const panel = menu.querySelector('.cert-doc-popover');
             if (!toggle || !panel) return;
 
-            if (closeTimer) {
-                window.clearTimeout(closeTimer);
-                closeTimer = null;
-            }
+            clearCloseTimer(menu);
             panel.hidden = false;
             menu.classList.add('is-open');
             toggle.setAttribute('aria-expanded', 'true');
@@ -650,19 +699,19 @@
             toggle.addEventListener('click', function (ev) {
                 ev.preventDefault();
                 const isOpen = menu.classList.contains('is-open');
-                if (isOpen) close(menu); else open(menu);
+                if (isOpen) close(menu, false); else open(menu);
             });
         });
 
         document.addEventListener('click', function (ev) {
             if (!openMenu) return;
             if (openMenu.contains(ev.target)) return;
-            close(openMenu);
+            close(openMenu, false);
         });
 
         document.addEventListener('keydown', function (ev) {
             if (ev.key !== 'Escape') return;
-            close(openMenu);
+            close(openMenu, false);
         });
     }
 
@@ -678,6 +727,7 @@
         initPortfolioFilter();
         initCertificationMenus();
         initToTop();
+        updateMenuToggleA11y(initialLanguage());
         setLanguage(initialLanguage());
     }
 
