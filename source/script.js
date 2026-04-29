@@ -106,12 +106,19 @@
             "cert.metaTitle": "Certificazioni — Siel Eolie",
             "cert.eyebrow": "Certificazioni",
             "cert.title": "Certificazioni e abilitazioni",
-            "cert.lead": "Le certificazioni garantiscono tracciabilita, conformita normativa e manutenzioni eseguite secondo standard verificabili.",
+            "cert.lead": "Le certificazioni garantiscono tracciabilita, conformita normativa e manutenzioni eseguite secondo standard verificabili. Questa sezione raccoglie i documenti disponibili e riflette il nostro percorso di miglioramento continuo.",
             "cert.icim.title": "Certificazione ICIM",
             "cert.icim.body": "Dal 2014 siamo certificati per la manutenzione di impianti antincendio, reti idranti e porte tagliafuoco. A Lipari e nelle isole minori siamo l'unica azienda abilitata per questi servizi.",
             "cert.icim.tag": "Attiva dal 2014",
-            "cert.more.title": "Documentazione certificazioni",
-            "cert.more.body": "Questa pagina ospitera progressivamente tutte le certificazioni disponibili (3-4 totali).",
+            "cert.rina.title": "RINA Certification",
+            "cert.rina.body": "Siamo abilitati alla fornitura dei seguenti servizi a navi e altre unita classificate RINA: ispezioni e manutenzione di apparecchi ed impianti antincendio, limitatamente ad impianti fissi a CO2, estintori portatili ed estintori di grande capacita.",
+            "cert.rina.tag": "Attiva dal 2019",
+            "cert.rina.menuA11y": "Apri opzioni certificazione precedenti",
+            "cert.rina.downloadMenuA11y": "Apri opzioni di download precedenti",
+            "cert.rina.prevView": "Visualizza certificazione 2019",
+            "cert.rina.prevDownload": "Scarica certificazione 2019",
+            "cert.more.title": "Percorso di crescita continua",
+            "cert.more.body": "Continueremo a conseguire nuove certificazioni per migliorare come azienda e garantire standard sempre piu alti.",
             "cert.viewFile": "Visualizza certificazione",
             "cert.downloadFile": "Scarica",
             "cert.ctaHome": "Torna alla home",
@@ -218,12 +225,19 @@
             "cert.metaTitle": "Certifications — Siel Eolie",
             "cert.eyebrow": "Certifications",
             "cert.title": "Certifications and qualifications",
-            "cert.lead": "Our certifications ensure traceability, regulatory compliance, and maintenance performed against verifiable standards.",
+            "cert.lead": "Our certifications ensure traceability, regulatory compliance, and maintenance performed against verifiable standards. This section gathers available documents and reflects our continuous improvement path.",
             "cert.icim.title": "ICIM Certification",
             "cert.icim.body": "Since 2014 we have been certified for the maintenance of fire-safety systems, hydrant networks, and fire doors. In Lipari and the smaller islands, we are the only authorised provider for these services.",
             "cert.icim.tag": "Active since 2014",
-            "cert.more.title": "Certification documentation",
-            "cert.more.body": "This page will progressively include all available certifications (3-4 total).",
+            "cert.rina.title": "RINA Certification",
+            "cert.rina.body": "We are qualified to provide the following services to ships and other units classed by RINA: inspection and maintenance of fire-fighting appliances and systems, limited to fixed CO2 systems, portable extinguishers, and wheeled extinguishers (large capacity).",
+            "cert.rina.tag": "Active since 2019",
+            "cert.rina.menuA11y": "Open previous certification options",
+            "cert.rina.downloadMenuA11y": "Open previous download options",
+            "cert.rina.prevView": "View 2019 certificate",
+            "cert.rina.prevDownload": "Download 2019 certificate",
+            "cert.more.title": "Continuous growth path",
+            "cert.more.body": "We will continue pursuing new certifications to improve as a company and ensure ever higher standards.",
             "cert.viewFile": "View certificate",
             "cert.downloadFile": "Download",
             "cert.ctaHome": "Back to home",
@@ -426,11 +440,38 @@
         let touchStartY = null;
         let touchDeltaY = 0;
         let dragging = false;
+        let rafId = 0;
+        let pendingTranslateY = 0;
+
+        function applyDrawerDragTransform() {
+            rafId = 0;
+            if (!dragging) return;
+            links.style.transition = 'none';
+            if (pendingTranslateY <= 0) {
+                links.style.transform = '';
+                return;
+            }
+            const damped = pendingTranslateY > RUBBER_LIMIT
+                ? RUBBER_LIMIT + (pendingTranslateY - RUBBER_LIMIT) * 0.4
+                : pendingTranslateY;
+            links.style.transform = 'translateY(' + damped + 'px)';
+        }
+
+        function scheduleDrawerDragTransform(dy) {
+            pendingTranslateY = dy;
+            if (rafId) return;
+            rafId = window.requestAnimationFrame(applyDrawerDragTransform);
+        }
 
         function clearDrag() {
+            if (rafId) {
+                window.cancelAnimationFrame(rafId);
+                rafId = 0;
+            }
             dragging = false;
             touchStartY = null;
             touchDeltaY = 0;
+            pendingTranslateY = 0;
             links.style.transition = '';
             links.style.transform = '';
         }
@@ -449,20 +490,12 @@
             if (!dragging || touchStartY === null) return;
             const dy = ev.touches[0].clientY - touchStartY;
             if (dy <= 0) {
-                // Upward or no movement — stay put
-                links.style.transition = 'none';
-                links.style.transform = '';
                 touchDeltaY = 0;
+                scheduleDrawerDragTransform(0);
                 return;
             }
             touchDeltaY = dy;
-            // Disable transition while finger drags
-            links.style.transition = 'none';
-            // Soft rubber-band past RUBBER_LIMIT
-            const damped = dy > RUBBER_LIMIT
-                ? RUBBER_LIMIT + (dy - RUBBER_LIMIT) * 0.4
-                : dy;
-            links.style.transform = 'translateY(' + damped + 'px)';
+            scheduleDrawerDragTransform(dy);
         }, { passive: true });
 
         function endDrag() {
@@ -572,6 +605,67 @@
         if (y) y.textContent = new Date().getFullYear();
     }
 
+    function initCertificationMenus() {
+        const menus = document.querySelectorAll('[data-cert-menu]');
+        if (!menus.length) return;
+
+        let openMenu = null;
+        let closeTimer = null;
+
+        function close(menu) {
+            const target = menu || openMenu;
+            if (!target) return;
+            const toggle = target.querySelector('[data-cert-menu-toggle]');
+            const panel = target.querySelector('.cert-doc-popover');
+            if (!toggle || !panel) return;
+
+            target.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+            if (closeTimer) window.clearTimeout(closeTimer);
+            closeTimer = window.setTimeout(function () {
+                panel.hidden = true;
+            }, 180);
+            if (openMenu === target) openMenu = null;
+        }
+
+        function open(menu) {
+            if (openMenu && openMenu !== menu) close(openMenu);
+            const toggle = menu.querySelector('[data-cert-menu-toggle]');
+            const panel = menu.querySelector('.cert-doc-popover');
+            if (!toggle || !panel) return;
+
+            if (closeTimer) {
+                window.clearTimeout(closeTimer);
+                closeTimer = null;
+            }
+            panel.hidden = false;
+            menu.classList.add('is-open');
+            toggle.setAttribute('aria-expanded', 'true');
+            openMenu = menu;
+        }
+
+        menus.forEach(function (menu) {
+            const toggle = menu.querySelector('[data-cert-menu-toggle]');
+            if (!toggle) return;
+            toggle.addEventListener('click', function (ev) {
+                ev.preventDefault();
+                const isOpen = menu.classList.contains('is-open');
+                if (isOpen) close(menu); else open(menu);
+            });
+        });
+
+        document.addEventListener('click', function (ev) {
+            if (!openMenu) return;
+            if (openMenu.contains(ev.target)) return;
+            close(openMenu);
+        });
+
+        document.addEventListener('keydown', function (ev) {
+            if (ev.key !== 'Escape') return;
+            close(openMenu);
+        });
+    }
+
     // ------------------------------------------------------------------
     // Boot
     // ------------------------------------------------------------------
@@ -582,6 +676,7 @@
         initLangToggle();
         initMobileMenu();
         initPortfolioFilter();
+        initCertificationMenus();
         initToTop();
         setLanguage(initialLanguage());
     }
