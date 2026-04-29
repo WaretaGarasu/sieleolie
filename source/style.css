@@ -588,6 +588,10 @@ header::before {
 
 .btn-secondary {
     background: var(--bg);
+    color: var(--text);
+    border-color: var(--border);
+}
+[data-theme="light"] .btn-secondary {
     color: #0f2436;
     border-color: #b9c7d6;
 }
