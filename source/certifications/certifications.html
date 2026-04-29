@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="Pagina non trovata — Siel Eolie" />
+    <meta name="description" content="Certificazioni Siel Eolie" />
     <meta name="theme-color" content="#ffffff" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="apple-mobile-web-app-title" content="Siel Eolie" />
 
-    <title data-i18n="nf.metaTitle">Pagina non trovata — Siel Eolie</title>
+    <title data-i18n="cert.metaTitle">Certificazioni - Siel Eolie</title>
+    <link rel="canonical" href="https://sieleolie.com/certifications/" />
 
     <link rel="icon" type="image/svg+xml" href="/source/img/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/source/img/favicon-32.png" />
@@ -33,14 +33,12 @@
 
     <link rel="preload" href="/source/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/source/fonts/outfit-latin.woff2" as="font" type="font/woff2" crossorigin />
-
     <link rel="stylesheet" href="/source/style.min.css" />
 </head>
 <body>
-
 <header>
     <div class="container nav">
-        <a href="/" class="brand" aria-label="Siel Eolie — home">
+        <a href="/" class="brand" aria-label="Siel Eolie - home">
             <img src="/source/img/favicon.svg" alt="" class="brand-mark" aria-hidden="true" width="38" height="38" />
             <span class="brand-name">Siel <em>Eolie</em></span>
         </a>
@@ -82,16 +80,49 @@
     </div>
 </header>
 
-<main class="not-found">
-    <div class="not-found-inner">
-        <p class="code" aria-hidden="true">404</p>
-        <h1 data-i18n="nf.title">Pagina non trovata</h1>
-        <p data-i18n="nf.body">La pagina che stai cercando non esiste o è stata spostata.</p>
-        <div class="hero-ctas">
-            <a href="/" class="btn btn-primary" data-i18n="nf.ctaHome">Torna alla home</a>
-            <a href="/#contatti" class="btn btn-secondary" data-i18n="nf.ctaContact">Contattaci</a>
+<main>
+    <section class="section">
+        <div class="container">
+            <p class="eyebrow" data-i18n="cert.eyebrow">Certificazioni</p>
+            <h1 data-i18n="cert.title">Certificazioni e abilitazioni</h1>
+            <p class="section-lead" data-i18n="cert.lead">Le certificazioni garantiscono tracciabilita, conformita normativa e manutenzioni eseguite secondo standard verificabili.</p>
+
+            <div class="services-grid">
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="32" height="32"><path d="M12 2 4 5v7c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5l-8-3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
+                    </div>
+                    <h2 data-i18n="cert.icim.title">Certificazione ICIM</h2>
+                    <p data-i18n="cert.icim.body">Dal 2014 siamo certificati per la manutenzione di impianti antincendio, reti idranti e porte tagliafuoco. A Lipari e nelle isole minori siamo l'unica azienda abilitata per questi servizi.</p>
+                    <p class="eyebrow" style="margin-top:14px;" data-i18n="cert.icim.tag">Attiva dal 2014</p>
+                    <div class="cert-doc-actions">
+                        <a href="/source/docs/certifications/icim-certification.pdf" class="btn btn-primary" target="_blank" rel="noopener" data-i18n="cert.viewFile">Visualizza file</a>
+                        <a href="/source/docs/certifications/icim-certification.pdf" class="btn btn-secondary" download="icim-certification.pdf" data-i18n="cert.downloadFile">Scarica file</a>
+                    </div>
+                </article>
+
+                <article class="service-card">
+                    <div class="service-icon" aria-hidden="true">
+                        <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="32" height="32"><path d="M5 12h14M12 5v14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                    </div>
+                    <h2 data-i18n="cert.more.title">Documentazione certificazioni</h2>
+                    <p data-i18n="cert.more.body">Questa pagina ospitera progressivamente tutte le certificazioni disponibili (3-4 totali).</p>
+                </article>
+            </div>
+
+            <div class="cert-page-actions" aria-labelledby="certActionsTitle">
+                <div class="cert-page-actions-text">
+                    <p class="eyebrow cert-page-actions-eyebrow" data-i18n="cert.quickActionsEyebrow">Azioni rapide</p>
+                    <h2 id="certActionsTitle" data-i18n="cert.quickActionsTitle">Vuoi continuare la navigazione?</h2>
+                    <p class="cert-page-actions-body" data-i18n="cert.quickActionsBody">Torna alla home oppure contattaci direttamente per qualsiasi informazione.</p>
+                </div>
+                <div class="cert-page-actions-buttons">
+                    <a href="/" class="btn btn-primary" data-i18n="cert.ctaHome">Torna alla home</a>
+                    <a href="/#contatti" class="btn btn-secondary" data-i18n="cert.ctaContact">Contattaci</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 </main>
 
 <footer>
@@ -120,7 +151,7 @@
                 <span data-i18n="footer.built">Fatto con</span>
                 <span class="heart" aria-hidden="true">❤️</span>
                 <span data-i18n="footer.builtBy">da</span>
-                <a href="https://waretagarasu.com" class="signature-link" target="_blank" rel="noopener author" aria-label="WaretaGarasu — portfolio"><strong class="signature">WaretaGarasu</strong></a>
+                <a href="https://waretagarasu.com" class="signature-link" target="_blank" rel="noopener author" aria-label="WaretaGarasu - portfolio"><strong class="signature">WaretaGarasu</strong></a>
             </div>
         </div>
     </div>

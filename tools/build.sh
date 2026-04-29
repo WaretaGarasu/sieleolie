@@ -6,6 +6,7 @@
 #   source/                    ← TRUTH (you edit here)
 #     index.html               readable home
 #     404.html                 readable 404
+#     certifications/certifications.html readable certifications page
 #     projects/*.html          readable case studies
 #     style.css                readable CSS
 #     script.js                readable JS
@@ -59,6 +60,7 @@ done
 required=(
   source/index.html
   source/404.html
+  source/certifications/certifications.html
   source/style.css
   source/script.js
 )
@@ -108,6 +110,7 @@ printf "  source/script.js: %d → source/script.min.js: %d (%.1f%%)\n" \
 # -----------------------------------------------------------------------------
 echo "→ Building HTML  (source/ → root)"
 mkdir -p projects
+mkdir -p certifications
 
 build_html() {
   local src="$1"             # e.g. source/index.html or source/projects/eolietech.html
@@ -133,8 +136,33 @@ build_html() {
   printf "  %-40s  %6d  →  %-32s  %6d\n" "$src" "$before" "$dst" "$after"
 }
 
+build_html_to() {
+  local src="$1"             # source input
+  local dst="$2"             # explicit output path
+  local before after
+  before=$(wc -c < "$src")
+  npx --yes html-minifier-terser "$src" \
+    --collapse-whitespace \
+    --conservative-collapse \
+    --remove-comments \
+    --remove-redundant-attributes \
+    --remove-empty-attributes \
+    --remove-script-type-attributes \
+    --remove-style-link-type-attributes \
+    --use-short-doctype \
+    --minify-css true \
+    --minify-js true \
+    --decode-entities \
+    --sort-attributes \
+    --sort-class-name \
+    -o "$dst"
+  after=$(wc -c < "$dst")
+  printf "  %-40s  %6d  →  %-32s  %6d\n" "$src" "$before" "$dst" "$after"
+}
+
 build_html source/index.html
 build_html source/404.html
+build_html_to source/certifications/certifications.html certifications/index.html
 for f in source/projects/*.html; do
   [ -e "$f" ] || continue
   build_html "$f"

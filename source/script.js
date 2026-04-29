@@ -22,6 +22,7 @@
 
             "nav.about": "Chi siamo",
             "nav.services": "Servizi",
+            "nav.certifications": "Certificazioni",
             "nav.portfolio": "Portfolio",
             "nav.contact": "Contatti",
 
@@ -100,7 +101,28 @@
             "nf.title": "Pagina non trovata",
             "nf.body": "La pagina che stai cercando non esiste o è stata spostata.",
             "nf.ctaHome": "Torna alla home",
-            "nf.ctaContact": "Contattaci"
+            "nf.ctaContact": "Contattaci",
+
+            "cert.metaTitle": "Certificazioni — Siel Eolie",
+            "cert.eyebrow": "Certificazioni",
+            "cert.title": "Certificazioni e abilitazioni",
+            "cert.lead": "Le certificazioni garantiscono tracciabilita, conformita normativa e manutenzioni eseguite secondo standard verificabili.",
+            "cert.icim.title": "Certificazione ICIM",
+            "cert.icim.body": "Dal 2014 siamo certificati per la manutenzione di impianti antincendio, reti idranti e porte tagliafuoco. A Lipari e nelle isole minori siamo l'unica azienda abilitata per questi servizi.",
+            "cert.icim.tag": "Attiva dal 2014",
+            "cert.more.title": "Documentazione certificazioni",
+            "cert.more.body": "Questa pagina ospitera progressivamente tutte le certificazioni disponibili (3-4 totali).",
+            "cert.viewFile": "Visualizza file",
+            "cert.downloadFile": "Scarica file",
+            "cert.ctaHome": "Torna alla home",
+            "cert.ctaContact": "Contattaci",
+            "cert.quickActionsEyebrow": "Azioni rapide",
+            "cert.quickActionsTitle": "Vuoi continuare la navigazione?",
+            "cert.quickActionsBody": "Torna alla home oppure contattaci direttamente per qualsiasi informazione.",
+            "cert.homeEyebrow": "Certificazioni",
+            "cert.homeTitle": "Le nostre certificazioni",
+            "cert.homeBody": "Consulta tutte le certificazioni dell'azienda in un'unica pagina dedicata.",
+            "cert.homeCta": "Apri pagina certificazioni"
         },
 
         en: {
@@ -112,6 +134,7 @@
 
             "nav.about": "About",
             "nav.services": "Services",
+            "nav.certifications": "Certifications",
             "nav.portfolio": "Portfolio",
             "nav.contact": "Contact",
 
@@ -190,7 +213,28 @@
             "nf.title": "Page not found",
             "nf.body": "The page you're looking for doesn't exist or has been moved.",
             "nf.ctaHome": "Back to home",
-            "nf.ctaContact": "Contact us"
+            "nf.ctaContact": "Contact us",
+
+            "cert.metaTitle": "Certifications — Siel Eolie",
+            "cert.eyebrow": "Certifications",
+            "cert.title": "Certifications and qualifications",
+            "cert.lead": "Our certifications ensure traceability, regulatory compliance, and maintenance performed against verifiable standards.",
+            "cert.icim.title": "ICIM Certification",
+            "cert.icim.body": "Since 2014 we have been certified for the maintenance of fire-safety systems, hydrant networks, and fire doors. In Lipari and the smaller islands, we are the only authorised provider for these services.",
+            "cert.icim.tag": "Active since 2014",
+            "cert.more.title": "Certification documentation",
+            "cert.more.body": "This page will progressively include all available certifications (3-4 total).",
+            "cert.viewFile": "View file",
+            "cert.downloadFile": "Download file",
+            "cert.ctaHome": "Back to home",
+            "cert.ctaContact": "Contact us",
+            "cert.quickActionsEyebrow": "Quick actions",
+            "cert.quickActionsTitle": "Would you like to continue browsing?",
+            "cert.quickActionsBody": "Return to the homepage or contact us directly for any information.",
+            "cert.homeEyebrow": "Certifications",
+            "cert.homeTitle": "Our certifications",
+            "cert.homeBody": "See all company certifications on one dedicated page.",
+            "cert.homeCta": "Open certifications page"
         }
     };
 
