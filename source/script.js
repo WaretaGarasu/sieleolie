@@ -110,10 +110,11 @@
             "cert.eyebrow": "Certificazioni",
             "cert.title": "Certificazioni e abilitazioni",
             "cert.lead": "Le certificazioni garantiscono tracciabilita, conformita normativa e manutenzioni eseguite secondo standard verificabili. Questa sezione raccoglie i documenti disponibili e riflette il nostro percorso di miglioramento continuo.",
+            "cert.activeSince": "Attiva dal",
             "cert.icim.title": "Certificazione ICIM",
             "cert.icim.body": "Dal 2014 siamo certificati per la manutenzione di impianti antincendio, reti idranti e porte tagliafuoco. A Lipari e nelle isole minori siamo l'unica azienda abilitata per questi servizi.",
             "cert.icim.tag": "Attiva dal 2014",
-            "cert.rina.title": "RINA Certification",
+            "cert.rina.title": "Certificazione RINA",
             "cert.rina.body": "Siamo abilitati alla fornitura dei seguenti servizi a navi e altre unita classificate RINA: ispezioni e manutenzione di apparecchi ed impianti antincendio, limitatamente ad impianti fissi a CO2, estintori portatili ed estintori di grande capacita.",
             "cert.rina.tag": "Attiva dal 2019",
             "cert.rina.menuA11y": "Apri opzioni certificazione precedenti",
@@ -232,6 +233,7 @@
             "cert.eyebrow": "Certifications",
             "cert.title": "Certifications and qualifications",
             "cert.lead": "Our certifications ensure traceability, regulatory compliance, and maintenance performed against verifiable standards. This section gathers available documents and reflects our continuous improvement path.",
+            "cert.activeSince": "Active since",
             "cert.icim.title": "ICIM Certification",
             "cert.icim.body": "Since 2014 we have been certified for the maintenance of fire-safety systems, hydrant networks, and fire doors. In Lipari and the smaller islands, we are the only authorised provider for these services.",
             "cert.icim.tag": "Active since 2014",
@@ -638,83 +640,6 @@
         if (y) y.textContent = new Date().getFullYear();
     }
 
-    function initCertificationMenus() {
-        const menus = document.querySelectorAll('[data-cert-menu]');
-        if (!menus.length) return;
-
-        let openMenu = null;
-        const closeTimers = new WeakMap();
-
-        function clearCloseTimer(menu) {
-            const timerId = closeTimers.get(menu);
-            if (!timerId) return;
-            window.clearTimeout(timerId);
-            closeTimers.delete(menu);
-        }
-
-        function close(menu, immediate) {
-            const target = menu || openMenu;
-            if (!target) return;
-            const toggle = target.querySelector('[data-cert-menu-toggle]');
-            const panel = target.querySelector('.cert-doc-popover');
-            if (!toggle || !panel) return;
-
-            clearCloseTimer(target);
-            target.classList.remove('is-open');
-            toggle.setAttribute('aria-expanded', 'false');
-            if (immediate) {
-                panel.hidden = true;
-            } else {
-                const timerId = window.setTimeout(function () {
-                    panel.hidden = true;
-                    closeTimers.delete(target);
-                }, 180);
-                closeTimers.set(target, timerId);
-            }
-            if (openMenu === target) openMenu = null;
-        }
-
-        function closeOthers(exceptMenu) {
-            menus.forEach(function (menu) {
-                if (menu !== exceptMenu) close(menu, true);
-            });
-        }
-
-        function open(menu) {
-            closeOthers(menu);
-            const toggle = menu.querySelector('[data-cert-menu-toggle]');
-            const panel = menu.querySelector('.cert-doc-popover');
-            if (!toggle || !panel) return;
-
-            clearCloseTimer(menu);
-            panel.hidden = false;
-            menu.classList.add('is-open');
-            toggle.setAttribute('aria-expanded', 'true');
-            openMenu = menu;
-        }
-
-        menus.forEach(function (menu) {
-            const toggle = menu.querySelector('[data-cert-menu-toggle]');
-            if (!toggle) return;
-            toggle.addEventListener('click', function (ev) {
-                ev.preventDefault();
-                const isOpen = menu.classList.contains('is-open');
-                if (isOpen) close(menu, false); else open(menu);
-            });
-        });
-
-        document.addEventListener('click', function (ev) {
-            if (!openMenu) return;
-            if (openMenu.contains(ev.target)) return;
-            close(openMenu, false);
-        });
-
-        document.addEventListener('keydown', function (ev) {
-            if (ev.key !== 'Escape') return;
-            close(openMenu, false);
-        });
-    }
-
     // ------------------------------------------------------------------
     // Boot
     // ------------------------------------------------------------------
@@ -725,7 +650,6 @@
         initLangToggle();
         initMobileMenu();
         initPortfolioFilter();
-        initCertificationMenus();
         initToTop();
         updateMenuToggleA11y(initialLanguage());
         setLanguage(initialLanguage());

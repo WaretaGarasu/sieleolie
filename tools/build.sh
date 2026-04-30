@@ -109,7 +109,6 @@ printf "  source/script.js: %d → source/script.min.js: %d (%.1f%%)\n" \
 # and written to its mirror path at the repo root.
 # -----------------------------------------------------------------------------
 echo "→ Building HTML  (source/ → root)"
-mkdir -p projects
 mkdir -p certifications
 
 build_html() {
