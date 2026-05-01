@@ -168,6 +168,64 @@ for f in source/projects/*.html; do
 done
 
 # -----------------------------------------------------------------------------
+# SITEMAP  — generate sitemap.xml from canonical built pages.
+# Includes root, certifications, and optional source/projects/*.html pages.
+# -----------------------------------------------------------------------------
+echo "→ Generating sitemap.xml"
+python3 - <<'PY'
+from __future__ import annotations
+
+from datetime import datetime
+from pathlib import Path
+import xml.etree.ElementTree as ET
+
+ROOT = Path(".")
+BASE_URL = "https://sieleolie.com"
+
+entries = [
+    (Path("source/index.html"), "/"),
+    (Path("source/certifications/certifications.html"), "/certifications/"),
+]
+
+for src in sorted((ROOT / "source/projects").glob("*.html")):
+    rel = src.relative_to(ROOT / "source").as_posix()
+    entries.append((Path("source") / rel, f"/{rel}"))
+
+def sort_key(item: tuple[Path, str]) -> tuple[int, str]:
+    _, url_path = item
+    return (0 if url_path == "/" else 1, url_path)
+
+def lastmod(path: Path) -> str:
+    ts = path.stat().st_mtime
+    return datetime.utcfromtimestamp(ts).strftime("%Y-%m-%d")
+
+urlset = ET.Element("urlset", {"xmlns": "http://www.sitemaps.org/schemas/sitemap/0.9"})
+for src_path, url_path in sorted(entries, key=sort_key):
+    if not src_path.exists():
+        continue
+    url_el = ET.SubElement(urlset, "url")
+    ET.SubElement(url_el, "loc").text = f"{BASE_URL}{url_path}"
+    ET.SubElement(url_el, "lastmod").text = lastmod(src_path)
+    ET.SubElement(url_el, "changefreq").text = "monthly"
+
+xml_bytes = ET.tostring(urlset, encoding="utf-8")
+out = ROOT / "sitemap.xml"
+tree = ET.ElementTree(urlset)
+# Pretty-print the sitemap when Python supports ET.indent (3.9+).
+if hasattr(ET, "indent"):
+    ET.indent(tree, space="    ")
+    tree.write(out, encoding="utf-8", xml_declaration=True)
+else:
+    # Fallback for older Python versions: still produce valid compact XML.
+    with out.open("wb") as f:
+        f.write(b'<?xml version="1.0" encoding="UTF-8"?>\n')
+        f.write(xml_bytes)
+        f.write(b"\n")
+
+print(f"  Wrote {out.as_posix()} with {len(urlset)} URL(s)")
+PY
+
+# -----------------------------------------------------------------------------
 # PNG  — opt-in. Lossless re-encode in place under source/img/.
 # -----------------------------------------------------------------------------
 if $DO_PNG; then

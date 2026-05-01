@@ -26,6 +26,20 @@ The project showcases technical expertise through a dedicated visual portfolio o
 
 The site is hosted on **Cloudflare Pages**. The deployment pipeline ensures that every update to the technical gallery is instantly available worldwide via Cloudflare's edge network.
 
+## 🛠️ Build Workflow
+
+- Edit source files under `source/`.
+- Run `./tools/build.sh` from the repository root.
+- The build regenerates:
+  - `index.html`
+  - `404.html`
+  - `certifications/index.html`
+  - `source/style.min.css`
+  - `source/script.min.js`
+  - `sitemap.xml` (auto-generated every build)
+
+`robots.txt` already points to `https://sieleolie.com/sitemap.xml`, so no manual sitemap editing is needed.
+
 ## 📄 License
 
 **Copyright © 2026 WaretaGarasu.** All rights reserved. The design, photography, and technical content are proprietary. No part of this project may be reproduced or repurposed without explicit permission.
