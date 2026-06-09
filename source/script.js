@@ -1,5 +1,5 @@
 /* =========================================================================
-   Siel Eolie — single script
+   Siel Eolie - single script
    - Bilingual IT/EN toggle with localStorage persistence
    - Mobile menu
    - Portfolio filter tabs
@@ -14,8 +14,8 @@
     // ------------------------------------------------------------------
     const translations = {
         it: {
-            "meta.title": "Siel Eolie — Impianti elettrici alle Isole Eolie",
-            "meta.ogTitle": "Siel Eolie — Impianti elettrici alle Isole Eolie",
+            "meta.title": "Siel Eolie | Impianti elettrici alle Isole Eolie",
+            "meta.ogTitle": "Siel Eolie | Impianti elettrici alle Isole Eolie",
             "meta.ogDescription": "Impianti elettrici civili e industriali, quadri, sicurezza, antincendio e fotovoltaico. Lipari e tutto l'arcipelago eoliano, dal 1997.",
 
             "brand.name": "Siel Eolie",
@@ -28,7 +28,7 @@
 
             "hero.eyebrow": "Lipari · Isole Eolie · dal 1997",
             "hero.title": "Impianti elettrici alle Isole Eolie",
-            "hero.lead": "Progettiamo, installiamo e manteniamo impianti elettrici civili e industriali, quadri, sistemi di sicurezza e antincendio, fotovoltaico. Con sede a Lipari, raggiungiamo ogni angolo dell'arcipelago — da Vulcano a Stromboli, da Salina ad Alicudi.",
+            "hero.lead": "Progettiamo, installiamo e manteniamo impianti elettrici civili e industriali, quadri, sistemi di sicurezza e antincendio, fotovoltaico. Con sede a Lipari, raggiungiamo ogni angolo dell'arcipelago, da Vulcano a Stromboli, da Salina ad Alicudi.",
             "hero.icimBadge": "ICIM · unica azienda certificata a Lipari e isole minori · dal 2014",
             "hero.ctaServices": "Scopri i servizi",
             "hero.ctaContact": "Contattaci",
@@ -36,11 +36,11 @@
             "about.eyebrow": "Chi siamo",
             "about.title": "Una storia eoliana, dal 1997",
             "about.companyTitle": "L'azienda",
-            "about.companyBody": "Siel Eolie è un'impresa elettrica con sede a Lipari, attiva in tutto l'arcipelago. Realizziamo impianti civili e industriali, quadri elettrici su misura, automazioni e reti wireless, impianti fotovoltaici e sistemi antincendio. Lavoriamo per abitazioni private, alberghi e strutture ricettive, cantieri industriali, condomini ed enti pubblici — dal piccolo intervento al grande appalto, sempre con materiali di prima qualità e tempi di consegna rispettati. Il nostro team segue ogni lavoro dall'idea iniziale fino alla manutenzione programmata.",
+            "about.companyBody": "Siel Eolie è un'impresa elettrica con sede a Lipari, attiva in tutto l'arcipelago. Realizziamo impianti civili e industriali, quadri elettrici su misura, automazioni e reti wireless, impianti fotovoltaici e sistemi antincendio. Lavoriamo per abitazioni private, alberghi e strutture ricettive, cantieri industriali, condomini ed enti pubblici: dal piccolo intervento al grande appalto, sempre con materiali di prima qualità e tempi di consegna rispettati. Il nostro team segue ogni lavoro dall'idea iniziale fino alla manutenzione programmata.",
             "about.historyTitle": "La storia",
-            "about.historyBody": "Siel nasce a Lipari nel 2004, erede della S.I.EL snc avviata nel 1997 dal fondatore e attuale amministratore, Geometra Giuseppe Orto. In oltre vent'anni abbiamo visto cambiare le Eolie e siamo cresciuti insieme al territorio. Durante l'Emergenza Stromboli del 2003 abbiamo lavorato a fianco della Protezione Civile per portare impianti elettrici, videosorveglianza e cablaggio della rete LAN fin sul vulcano in attività — un intervento complesso, fatto di trasporti in elicottero, sentieri attrezzati e lavori in quota. Quello spirito — esserci dove serve, quando serve — ci guida ancora oggi.",
+            "about.historyBody": "Siel nasce a Lipari nel 2004, erede della S.I.EL snc avviata nel 1997 dal fondatore e attuale amministratore, Geometra Giuseppe Orto. In oltre vent'anni abbiamo visto cambiare le Eolie e siamo cresciuti insieme al territorio. Durante l'Emergenza Stromboli del 2003 abbiamo lavorato a fianco della Protezione Civile per portare impianti elettrici, videosorveglianza e cablaggio della rete LAN fin sul vulcano in attività: un intervento complesso, fatto di trasporti in elicottero, sentieri attrezzati e lavori in quota. Quello spirito, esserci dove serve quando serve, ci guida ancora oggi.",
             "about.certTitle": "Certificazioni",
-            "about.certBody": "Dal 2014 siamo certificati ICIM per la manutenzione di impianti antincendio, reti idranti e porte tagliafuoco: l'unica azienda autorizzata a fornire questi servizi a Lipari e nelle isole minori dell'arcipelago. La certificazione ICIM garantisce il rispetto delle normative UNI e la tracciabilità di ogni intervento — requisito fondamentale per alberghi, strutture pubbliche, condomini e qualsiasi attività soggetta a controllo antincendio.",
+            "about.certBody": "Dal 2014 siamo certificati ICIM per la manutenzione di impianti antincendio, reti idranti e porte tagliafuoco: l'unica azienda autorizzata a fornire questi servizi a Lipari e nelle isole minori dell'arcipelago. La certificazione ICIM garantisce il rispetto delle normative UNI e la tracciabilità di ogni intervento, requisito fondamentale per alberghi, strutture pubbliche, condomini e qualsiasi attività soggetta a controllo antincendio.",
 
             "services.eyebrow": "Servizi",
             "services.title": "Cosa facciamo",
@@ -53,6 +53,7 @@
             "services.security.body": "Antifurto, videosorveglianza, videocitofoni e antintrusione: tecnologia di ultima generazione per proteggere casa e lavoro.",
             "services.fire.title": "Antincendio",
             "services.fire.body": "Manutenzione di estintori, reti idranti e porte tagliafuoco. Siamo l'unica azienda certificata ICIM a Lipari e nelle isole minori, dal 2014.",
+            "services.fire.icimBadge": "ICIM · dal 2014",
             "services.solar.title": "Fotovoltaico",
             "services.solar.body": "Progettazione e installazione di impianti fotovoltaici chiavi in mano, per produrre energia pulita e ridurre la bolletta.",
             "services.automation.title": "Automazioni & reti",
@@ -60,7 +61,7 @@
 
             "portfolio.eyebrow": "Portfolio",
             "portfolio.title": "Alcune delle nostre realizzazioni",
-            "portfolio.lead": "Dalle abitazioni private ai cantieri sul vulcano — ogni progetto racconta oltre vent'anni di esperienza sul campo.",
+            "portfolio.lead": "Dalle abitazioni private ai cantieri sul vulcano: ogni progetto racconta oltre vent'anni di esperienza sul campo.",
             "portfolio.tabs.all": "Tutti",
             "portfolio.tabs.civile": "Impianti civili",
             "portfolio.tabs.industriale": "Impianti industriali",
@@ -74,6 +75,9 @@
             "contact.phoneLabel": "Cellulare",
             "contact.hoursLabel": "Orari",
             "contact.hoursValue": "Lun–Ven 09:00–13:00 / 15:00–19:00",
+            "contact.mapTitle": "Mappa: Siel Eolie a Lipari",
+            "contact.mapConsentText": "Cliccando «Carica mappa» Google Maps potrà impostare cookie di terze parti.",
+            "contact.mapConsentBtn": "Carica mappa",
 
             "cta.eyebrow": "Lavoriamo insieme",
             "cta.title": "Hai un progetto in mente?",
@@ -91,6 +95,11 @@
             "footer.legalCompany": "Ragione Sociale: SIEL S.R.L. DI A. & G.",
             "footer.legalVat": "P.IVA: 02774390831",
             "footer.legalRea": "REA: ME - 191994",
+            "footer.legalCapital": "Capitale Sociale: €10.000,00",
+
+            "cookie.text": "Utilizziamo Google Maps per mostrare la nostra sede. Il servizio può impostare cookie di terze parti.",
+            "cookie.accept": "Accetta",
+            "cookie.decline": "Rifiuta",
 
             "a11y.toTop": "Torna su",
             "a11y.themeToggle": "Cambia tema",
@@ -100,13 +109,13 @@
             "theme.toggleShort": "Tema",
             "theme.toggleLabel": "Cambia tema",
 
-            "nf.metaTitle": "Pagina non trovata — Siel Eolie",
+            "nf.metaTitle": "Pagina non trovata | Siel Eolie",
             "nf.title": "Pagina non trovata",
             "nf.body": "La pagina che stai cercando non esiste o è stata spostata.",
             "nf.ctaHome": "Torna alla home",
             "nf.ctaContact": "Contattaci",
 
-            "cert.metaTitle": "Certificazioni — Siel Eolie",
+            "cert.metaTitle": "Certificazioni | Siel Eolie",
             "cert.eyebrow": "Certificazioni",
             "cert.title": "Certificazioni e abilitazioni",
             "cert.lead": "Le certificazioni garantiscono tracciabilita, conformita normativa e manutenzioni eseguite secondo standard verificabili. Questa sezione raccoglie i documenti disponibili e riflette il nostro percorso di miglioramento continuo.",
@@ -133,13 +142,32 @@
             "cert.homeEyebrow": "Certificazioni",
             "cert.homeTitle": "Le nostre certificazioni",
             "cert.homeBody": "Consulta tutte le certificazioni dell'azienda in un'unica pagina dedicata.",
-            "cert.homeCta": "Apri pagina certificazioni"
+            "cert.homeCta": "Apri pagina certificazioni",
+
+            "form.heading": "Inviaci un messaggio",
+            "form.name": "Nome",
+            "form.namePlaceholder": "Giuseppe Rossi",
+            "form.email": "Email",
+            "form.emailPlaceholder": "nome@esempio.it",
+            "form.phone": "Telefono",
+            "form.phonePlaceholder": "+39 368 000 0000",
+            "form.service": "Servizio",
+            "form.serviceDefault": "Seleziona un servizio...",
+            "form.message": "Messaggio",
+            "form.messagePlaceholder": "Descrivi brevemente la tua richiesta...",
+            "form.submit": "Invia messaggio",
+            "form.sending": "Invio in corso...",
+            "form.success": "Messaggio inviato. Ti risponderemo presto.",
+            "form.error": "Errore durante l'invio. Riprova o scrivici a info@sieleolie.it.",
+            "form.validation.nameRequired": "Il nome è obbligatorio.",
+            "form.validation.emailRequired": "Inserisci un indirizzo email valido.",
+            "form.validation.messageRequired": "Il messaggio è obbligatorio."
         },
 
         en: {
-            "meta.title": "Siel Eolie — Electrical systems in the Aeolian Islands",
-            "meta.ogTitle": "Siel Eolie — Electrical systems in the Aeolian Islands",
-            "meta.ogDescription": "Siel Eolie — civil and industrial electrical systems, switchboards, security, fire safety and photovoltaics. Lipari and the whole Aeolian archipelago, since 1997.",
+            "meta.title": "Siel Eolie | Electrical systems in the Aeolian Islands",
+            "meta.ogTitle": "Siel Eolie | Electrical systems in the Aeolian Islands",
+            "meta.ogDescription": "Civil and industrial electrical systems, switchboards, security, fire safety and photovoltaics. Lipari and the whole Aeolian archipelago, since 1997.",
 
             "brand.name": "Siel Eolie",
 
@@ -151,7 +179,7 @@
 
             "hero.eyebrow": "Lipari · Aeolian Islands · since 1997",
             "hero.title": "Electrical systems for the Aeolian Islands",
-            "hero.lead": "We design, install and maintain civil and industrial electrical systems, switchboards, security and fire-safety systems, and photovoltaics. Based in Lipari, we reach every corner of the archipelago — from Vulcano to Stromboli, from Salina to Alicudi.",
+            "hero.lead": "We design, install and maintain civil and industrial electrical systems, switchboards, security and fire-safety systems, and photovoltaics. Based in Lipari, we reach every corner of the archipelago, from Vulcano to Stromboli, from Salina to Alicudi.",
             "hero.icimBadge": "ICIM certified · the only provider in Lipari and the smaller islands · since 2014",
             "hero.ctaServices": "Our services",
             "hero.ctaContact": "Get in touch",
@@ -159,11 +187,11 @@
             "about.eyebrow": "About us",
             "about.title": "An Aeolian story, since 1997",
             "about.companyTitle": "The company",
-            "about.companyBody": "Siel Eolie is an electrical contractor based in Lipari, active across the whole archipelago. We build civil and industrial systems, custom electrical switchboards, automations and wireless networks, photovoltaic installations and fire-safety systems. We work for private homes, hotels and hospitality venues, industrial sites, condominiums and public bodies — from the smallest call-out to the largest contract, always with top-quality materials and deadlines we actually keep. Our team follows every job from first idea to scheduled maintenance.",
+            "about.companyBody": "Siel Eolie is an electrical contractor based in Lipari, active across the whole archipelago. We build civil and industrial systems, custom electrical switchboards, automations and wireless networks, photovoltaic installations and fire-safety systems. We work for private homes, hotels and hospitality venues, industrial sites, condominiums and public bodies: from the smallest call-out to the largest contract, always with top-quality materials and deadlines we actually keep. Our team follows every job from first idea to scheduled maintenance.",
             "about.historyTitle": "Our story",
-            "about.historyBody": "Siel was founded in Lipari in 2004 as the successor to S.I.EL snc, started in 1997 by our founder and current manager, Giuseppe Orto (Geometra). In more than twenty years we have watched the Aeolian Islands change, and we have grown with the territory. During the 2003 Stromboli emergency we worked alongside Italy's Civil Protection to bring electrical systems, video-surveillance and LAN cabling all the way up onto the active volcano — a demanding job that involved helicopter lifts, rope-access paths and high-altitude work. That spirit — being there where and when it matters — still guides us today.",
+            "about.historyBody": "Siel was founded in Lipari in 2004 as the successor to S.I.EL snc, started in 1997 by our founder and current manager, Giuseppe Orto (Geometra). In more than twenty years we have watched the Aeolian Islands change, and we have grown with the territory. During the 2003 Stromboli emergency we worked alongside Italy's Civil Protection to bring electrical systems, video-surveillance and LAN cabling all the way up onto the active volcano: a demanding job that involved helicopter lifts, rope-access paths and high-altitude work. That spirit, being there where and when it matters, still guides us today.",
             "about.certTitle": "Certifications",
-            "about.certBody": "Since 2014 we have been ICIM-certified for the maintenance of fire-safety systems, hydrant networks and fire doors: the only authorised provider of these services in Lipari and the smaller islands of the archipelago. ICIM certification guarantees compliance with current UNI standards and full traceability of every intervention — essential for hotels, public buildings, condominiums and any business subject to fire-safety inspection.",
+            "about.certBody": "Since 2014 we have been ICIM-certified for the maintenance of fire-safety systems, hydrant networks and fire doors: the only authorised provider of these services in Lipari and the smaller islands of the archipelago. ICIM certification guarantees compliance with current UNI standards and full traceability of every intervention, essential for hotels, public buildings, condominiums and any business subject to fire-safety inspection.",
 
             "services.eyebrow": "Services",
             "services.title": "What we do",
@@ -176,6 +204,7 @@
             "services.security.body": "Burglar alarms, CCTV, video intercoms and intrusion detection: the latest technology to protect your home and your business.",
             "services.fire.title": "Fire safety",
             "services.fire.body": "Maintenance of fire extinguishers, hydrant networks and fire doors. We're the only ICIM-certified company in Lipari and the smaller islands, since 2014.",
+            "services.fire.icimBadge": "ICIM · since 2014",
             "services.solar.title": "Photovoltaics",
             "services.solar.body": "Design and turnkey installation of photovoltaic systems, to produce clean energy and cut your bill.",
             "services.automation.title": "Automation & networks",
@@ -183,7 +212,7 @@
 
             "portfolio.eyebrow": "Portfolio",
             "portfolio.title": "Selected work",
-            "portfolio.lead": "From private homes to worksites on the volcano — every project carries more than twenty years of hands-on experience.",
+            "portfolio.lead": "From private homes to worksites on the volcano: every project carries more than twenty years of hands-on experience.",
             "portfolio.tabs.all": "All",
             "portfolio.tabs.civile": "Civil",
             "portfolio.tabs.industriale": "Industrial",
@@ -197,6 +226,9 @@
             "contact.phoneLabel": "Mobile",
             "contact.hoursLabel": "Hours",
             "contact.hoursValue": "Mon–Fri 09:00–13:00 / 15:00–19:00",
+            "contact.mapTitle": "Map: Siel Eolie in Lipari",
+            "contact.mapConsentText": "By clicking «Load map» Google Maps may set third-party cookies.",
+            "contact.mapConsentBtn": "Load map",
 
             "cta.eyebrow": "Let's work together",
             "cta.title": "Got a project in mind?",
@@ -214,6 +246,11 @@
             "footer.legalCompany": "Ragione Sociale (Company name): SIEL S.R.L. DI A. & G.",
             "footer.legalVat": "P.IVA (VAT No.): 02774390831",
             "footer.legalRea": "REA (Business registry): ME - 191994",
+            "footer.legalCapital": "Share capital: €10,000.00",
+
+            "cookie.text": "We use Google Maps to show our location. The service may set third-party cookies.",
+            "cookie.accept": "Accept",
+            "cookie.decline": "Decline",
 
             "a11y.toTop": "Back to top",
             "a11y.themeToggle": "Switch theme",
@@ -223,13 +260,13 @@
             "theme.toggleShort": "Theme",
             "theme.toggleLabel": "Switch theme",
 
-            "nf.metaTitle": "Page not found — Siel Eolie",
+            "nf.metaTitle": "Page not found | Siel Eolie",
             "nf.title": "Page not found",
             "nf.body": "The page you're looking for doesn't exist or has been moved.",
             "nf.ctaHome": "Back to home",
             "nf.ctaContact": "Contact us",
 
-            "cert.metaTitle": "Certifications — Siel Eolie",
+            "cert.metaTitle": "Certifications | Siel Eolie",
             "cert.eyebrow": "Certifications",
             "cert.title": "Certifications and qualifications",
             "cert.lead": "Our certifications ensure traceability, regulatory compliance, and maintenance performed against verifiable standards. This section gathers available documents and reflects our continuous improvement path.",
@@ -604,7 +641,7 @@
                 filters.forEach(function (other) {
                     const active = other === btn;
                     other.classList.toggle('active', active);
-                    other.setAttribute('aria-selected', active ? 'true' : 'false');
+                    other.setAttribute('aria-pressed', active ? 'true' : 'false');
                 });
 
                 items.forEach(function (item) {
@@ -641,6 +678,158 @@
     }
 
     // ------------------------------------------------------------------
+    // Map loader - shared between consent gate and cookie banner
+    // ------------------------------------------------------------------
+    var mapLoaded = false;
+    function loadMap() {
+        if (mapLoaded) return;
+        var wrapper = document.getElementById('mapWrapper');
+        if (!wrapper) return;
+        var src = wrapper.getAttribute('data-map-src');
+        if (!src) return;
+        var lang = currentLanguage();
+        var dict = translations[lang] || translations.it;
+        var title = dict['contact.mapTitle'] || 'Mappa Siel Eolie';
+        var iframe = document.createElement('iframe');
+        iframe.src = src;
+        iframe.title = title;
+        iframe.setAttribute('width', '600');
+        iframe.setAttribute('height', '450');
+        iframe.setAttribute('loading', 'lazy');
+        iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+        iframe.setAttribute('allowfullscreen', '');
+        iframe.style.cssText = 'width:100%;height:100%;border:0;display:block';
+        wrapper.innerHTML = '';
+        wrapper.appendChild(iframe);
+        mapLoaded = true;
+        try { localStorage.setItem('mapConsent', '1'); } catch (e) {}
+    }
+
+    // ------------------------------------------------------------------
+    // Map consent gate
+    // ------------------------------------------------------------------
+    function initMapConsent() {
+        var wrapper = document.getElementById('mapWrapper');
+        if (!wrapper) return;
+
+        try {
+            if (localStorage.getItem('mapConsent') === '1' || localStorage.getItem('cookieConsent') === 'accepted') {
+                loadMap();
+                return;
+            }
+        } catch (e) {}
+
+        var btn = document.getElementById('mapConsentBtn');
+        if (btn) btn.addEventListener('click', function () {
+            try { localStorage.setItem('cookieConsent', 'accepted'); } catch (e) {}
+            var banner = document.getElementById('cookieBanner');
+            if (banner) banner.hidden = true;
+            loadMap();
+        });
+    }
+
+    // ------------------------------------------------------------------
+    // Cookie consent banner
+    // ------------------------------------------------------------------
+    function initCookieBanner() {
+        var banner = document.getElementById('cookieBanner');
+        if (!banner) return;
+
+        try {
+            if (localStorage.getItem('cookieConsent') || localStorage.getItem('mapConsent') === '1') return;
+        } catch (e) {}
+
+        banner.hidden = false;
+
+        var acceptBtn = document.getElementById('cookieAccept');
+        var declineBtn = document.getElementById('cookieDecline');
+
+        if (acceptBtn) acceptBtn.addEventListener('click', function () {
+            try { localStorage.setItem('cookieConsent', 'accepted'); } catch (e) {}
+            banner.hidden = true;
+            loadMap();
+        });
+
+        if (declineBtn) declineBtn.addEventListener('click', function () {
+            try { localStorage.setItem('cookieConsent', 'declined'); } catch (e) {}
+            banner.hidden = true;
+        });
+    }
+
+    // ------------------------------------------------------------------
+    // Portfolio lightbox
+    // ------------------------------------------------------------------
+    function initLightbox() {
+        var dialog = document.getElementById('lightbox');
+        if (!dialog) return;
+
+        var items = Array.from(document.querySelectorAll('.portfolio-item'));
+        if (!items.length) return;
+
+        var lbImg = dialog.querySelector('.lightbox-img');
+        var lbCaption = dialog.querySelector('.lightbox-caption');
+        var closeBtn = dialog.querySelector('.lightbox-close');
+        var prevBtn = dialog.querySelector('.lightbox-prev');
+        var nextBtn = dialog.querySelector('.lightbox-next');
+        var currentIndex = -1;
+
+        function openAt(index) {
+            currentIndex = index;
+            var item = items[index];
+            var itemImg = item.querySelector('img');
+            if (!itemImg) return;
+            lbImg.src = itemImg.getAttribute('src');
+            lbImg.alt = itemImg.alt;
+            if (lbCaption) lbCaption.textContent = itemImg.alt;
+            dialog.showModal();
+        }
+
+        function closeDialog() {
+            dialog.close();
+            if (currentIndex >= 0) items[currentIndex].focus();
+        }
+
+        function showPrev() {
+            var idx = currentIndex;
+            do { idx = (idx - 1 + items.length) % items.length; } while (items[idx].hasAttribute('hidden') && idx !== currentIndex);
+            openAt(idx);
+        }
+
+        function showNext() {
+            var idx = currentIndex;
+            do { idx = (idx + 1) % items.length; } while (items[idx].hasAttribute('hidden') && idx !== currentIndex);
+            openAt(idx);
+        }
+
+        items.forEach(function (item, index) {
+            item.setAttribute('tabindex', '0');
+            item.setAttribute('role', 'button');
+            var itemImg = item.querySelector('img');
+            if (itemImg) item.setAttribute('aria-label', itemImg.alt);
+            item.addEventListener('click', function () { openAt(index); });
+            item.addEventListener('keydown', function (ev) {
+                if (ev.key === 'Enter' || ev.key === ' ') {
+                    ev.preventDefault();
+                    openAt(index);
+                }
+            });
+        });
+
+        if (closeBtn) closeBtn.addEventListener('click', closeDialog);
+        if (prevBtn) prevBtn.addEventListener('click', showPrev);
+        if (nextBtn) nextBtn.addEventListener('click', showNext);
+
+        dialog.addEventListener('click', function (ev) {
+            if (ev.target === dialog) closeDialog();
+        });
+
+        dialog.addEventListener('keydown', function (ev) {
+            if (ev.key === 'ArrowLeft') showPrev();
+            else if (ev.key === 'ArrowRight') showNext();
+        });
+    }
+
+    // ------------------------------------------------------------------
     // Boot
     // ------------------------------------------------------------------
     function boot() {
@@ -651,6 +840,9 @@
         initMobileMenu();
         initPortfolioFilter();
         initToTop();
+        initMapConsent();
+        initCookieBanner();
+        initLightbox();
         updateMenuToggleA11y(initialLanguage());
         setLanguage(initialLanguage());
     }
