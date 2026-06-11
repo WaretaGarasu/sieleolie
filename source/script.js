@@ -97,6 +97,7 @@
             "footer.legalRea": "REA: ME - 191994",
             "footer.legalCapital": "Capitale Sociale: €10.000,00",
 
+            "cookie.title": "Privacy",
             "cookie.text": "Utilizziamo Google Maps per mostrare la nostra sede. Il servizio può impostare cookie di terze parti.",
             "cookie.accept": "Accetta",
             "cookie.decline": "Rifiuta",
@@ -248,6 +249,7 @@
             "footer.legalRea": "REA (Business registry): ME - 191994",
             "footer.legalCapital": "Share capital: €10,000.00",
 
+            "cookie.title": "Privacy",
             "cookie.text": "We use Google Maps to show our location. The service may set third-party cookies.",
             "cookie.accept": "Accept",
             "cookie.decline": "Decline",
@@ -706,6 +708,17 @@
     }
 
     // ------------------------------------------------------------------
+    // Cookie banner dismiss (animated)
+    // ------------------------------------------------------------------
+    function dismissBanner(banner) {
+        banner.classList.add('cookie-banner--closing');
+        banner.addEventListener('animationend', function () {
+            banner.hidden = true;
+            banner.classList.remove('cookie-banner--closing');
+        }, { once: true });
+    }
+
+    // ------------------------------------------------------------------
     // Map consent gate
     // ------------------------------------------------------------------
     function initMapConsent() {
@@ -723,7 +736,7 @@
         if (btn) btn.addEventListener('click', function () {
             try { localStorage.setItem('cookieConsent', 'accepted'); } catch (e) {}
             var banner = document.getElementById('cookieBanner');
-            if (banner) banner.hidden = true;
+            if (banner) dismissBanner(banner);
             loadMap();
         });
     }
@@ -746,13 +759,13 @@
 
         if (acceptBtn) acceptBtn.addEventListener('click', function () {
             try { localStorage.setItem('cookieConsent', 'accepted'); } catch (e) {}
-            banner.hidden = true;
+            dismissBanner(banner);
             loadMap();
         });
 
         if (declineBtn) declineBtn.addEventListener('click', function () {
             try { localStorage.setItem('cookieConsent', 'declined'); } catch (e) {}
-            banner.hidden = true;
+            dismissBanner(banner);
         });
     }
 
