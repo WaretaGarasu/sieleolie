@@ -33,16 +33,17 @@
             "hero.ctaServices": "Scopri i servizi",
             "hero.ctaContact": "Contattaci",
 
-            "about.eyebrow": "Chi siamo",
             "about.title": "Una storia eoliana, dal 1997",
             "about.companyTitle": "L'azienda",
             "about.companyBody": "Siel Eolie è un'impresa elettrica con sede a Lipari, attiva in tutto l'arcipelago. Realizziamo impianti civili e industriali, quadri elettrici su misura, automazioni e reti wireless, impianti fotovoltaici e sistemi antincendio. Lavoriamo per abitazioni private, alberghi e strutture ricettive, cantieri industriali, condomini ed enti pubblici: dal piccolo intervento al grande appalto, sempre con materiali di prima qualità e tempi di consegna rispettati. Il nostro team segue ogni lavoro dall'idea iniziale fino alla manutenzione programmata.",
             "about.historyTitle": "La storia",
-            "about.historyBody": "Siel nasce a Lipari nel 2004, erede della S.I.EL snc avviata nel 1997 dal fondatore e attuale amministratore, Geometra Giuseppe Orto. In oltre vent'anni abbiamo visto cambiare le Eolie e siamo cresciuti insieme al territorio. Durante l'Emergenza Stromboli del 2003 abbiamo lavorato a fianco della Protezione Civile per portare impianti elettrici, videosorveglianza e cablaggio della rete LAN fin sul vulcano in attività: un intervento complesso, fatto di trasporti in elicottero, sentieri attrezzati e lavori in quota. Quello spirito, esserci dove serve quando serve, ci guida ancora oggi.",
+            "about.historyBody": "Siel nasce a Lipari nel 2004, erede della S.I.EL snc avviata nel 1997 dal fondatore e attuale amministratore, Geometra Giuseppe Orto. In oltre vent'anni abbiamo visto cambiare le Eolie e siamo cresciuti insieme al territorio.",
             "about.certTitle": "Certificazioni",
-            "about.certBody": "Dal 2014 siamo certificati ICIM per la manutenzione di impianti antincendio, reti idranti e porte tagliafuoco: l'unica azienda autorizzata a fornire questi servizi a Lipari e nelle isole minori dell'arcipelago. La certificazione ICIM garantisce il rispetto delle normative UNI e la tracciabilità di ogni intervento, requisito fondamentale per alberghi, strutture pubbliche, condomini e qualsiasi attività soggetta a controllo antincendio.",
+            "about.certBody": "Dal 2014 siamo certificati ICIM per la manutenzione di impianti antincendio, reti idranti e porte tagliafuoco: l'unica azienda autorizzata a fornire questi servizi a Lipari e nelle isole minori dell'arcipelago. La certificazione ICIM garantisce il rispetto delle normative UNI e la tracciabilità di ogni intervento, requisito fondamentale per alberghi, strutture pubbliche, condomini e qualsiasi attività soggetta a controllo antincendio. Dal 2026 il nostro tecnico è inoltre qualificato dai Vigili del Fuoco per la manutenzione delle reti idranti antincendio (presidio P.2).",
 
-            "services.eyebrow": "Servizi",
+            "story.marker": "Emergenza Stromboli",
+            "story.title": "Corrente e videosorveglianza sul vulcano in attività",
+            "story.body": "Durante l'Emergenza Stromboli del 2003 abbiamo lavorato a fianco della Protezione Civile per portare impianti elettrici, videosorveglianza e cablaggio della rete LAN fin sul vulcano in attività. Un intervento complesso, fatto di trasporti in elicottero, sentieri attrezzati e lavori in quota. Quello spirito, esserci dove serve quando serve, ci guida ancora oggi.",
             "services.title": "Cosa facciamo",
             "services.lead": "Dalla progettazione alla manutenzione: un'unica impresa che segue ogni fase del tuo impianto, con materiali di prima qualità e tempi di consegna rispettati.",
             "services.electric.title": "Impianti elettrici",
@@ -59,7 +60,6 @@
             "services.automation.title": "Automazioni & reti",
             "services.automation.body": "Automazioni di cancelli e serrande, reti Wi-Fi e hyperlan, cablaggi strutturati e assistenza hardware.",
 
-            "portfolio.eyebrow": "Portfolio",
             "portfolio.title": "Alcune delle nostre realizzazioni",
             "portfolio.lead": "Dalle abitazioni private ai cantieri sul vulcano: ogni progetto racconta oltre vent'anni di esperienza sul campo.",
             "portfolio.tabs.all": "Tutti",
@@ -67,17 +67,18 @@
             "portfolio.tabs.industriale": "Impianti industriali",
             "portfolio.tabs.quadro": "Quadri elettrici",
 
-            "contact.eyebrow": "Contatti",
             "contact.title": "Parliamone",
             "contact.lead": "Contattaci per un preventivo, una consulenza o un intervento di manutenzione. Siamo a Lipari e raggiungiamo tutte le Isole Eolie.",
             "contact.addressLabel": "Indirizzo",
             "contact.phoneFixedLabel": "Telefono",
             "contact.phoneLabel": "Cellulare",
             "contact.hoursLabel": "Orari",
+            "contact.adminTitle": "Dati amministrativi",
             "contact.hoursValue": "Lun–Ven 09:00–13:00 / 15:00–19:00",
             "contact.mapTitle": "Mappa: Siel Eolie a Lipari",
-            "contact.mapConsentText": "Cliccando «Carica mappa» Google Maps potrà impostare cookie di terze parti.",
+            "contact.mapConsentText": "Per visualizzare la mappa è necessario caricare Google Maps, che potrebbe impostare cookie di terze parti.",
             "contact.mapConsentBtn": "Carica mappa",
+            "contact.mapOpenExternal": "Apri in Google Maps",
 
             "cta.eyebrow": "Lavoriamo insieme",
             "cta.title": "Hai un progetto in mente?",
@@ -101,13 +102,13 @@
             "cookie.text": "Utilizziamo Google Maps per mostrare la nostra sede. Il servizio può impostare cookie di terze parti.",
             "cookie.accept": "Accetta",
             "cookie.decline": "Rifiuta",
+            "cookie.manage": "Gestisci cookie",
 
             "a11y.toTop": "Torna su",
             "a11y.themeToggle": "Cambia tema",
             "a11y.menuOpen": "Apri menu",
             "a11y.menuClose": "Chiudi menu",
             "a11y.skipToMain": "Vai al contenuto principale",
-            "theme.toggleShort": "Tema",
             "theme.toggleLabel": "Cambia tema",
 
             "nf.metaTitle": "Pagina non trovata | Siel Eolie",
@@ -119,28 +120,20 @@
             "cert.metaTitle": "Certificazioni | Siel Eolie",
             "cert.eyebrow": "Certificazioni",
             "cert.title": "Certificazioni e abilitazioni",
-            "cert.lead": "Le certificazioni garantiscono tracciabilita, conformita normativa e manutenzioni eseguite secondo standard verificabili. Questa sezione raccoglie i documenti disponibili e riflette il nostro percorso di miglioramento continuo.",
+            "cert.lead": "Le certificazioni garantiscono tracciabilità, conformità normativa e manutenzioni eseguite secondo standard verificabili. Questa sezione raccoglie i documenti disponibili e riflette il nostro percorso di miglioramento continuo.",
             "cert.activeSince": "Attiva dal",
             "cert.icim.title": "Certificazione ICIM",
             "cert.icim.body": "Dal 2014 siamo certificati per la manutenzione di impianti antincendio, reti idranti e porte tagliafuoco. A Lipari e nelle isole minori siamo l'unica azienda abilitata per questi servizi.",
-            "cert.icim.tag": "Attiva dal 2014",
             "cert.rina.title": "Certificazione RINA",
-            "cert.rina.body": "Siamo abilitati alla fornitura dei seguenti servizi a navi e altre unita classificate RINA: ispezioni e manutenzione di apparecchi ed impianti antincendio, limitatamente ad impianti fissi a CO2, estintori portatili ed estintori di grande capacita.",
-            "cert.rina.tag": "Attiva dal 2019",
-            "cert.rina.menuA11y": "Apri opzioni certificazione precedenti",
-            "cert.rina.downloadMenuA11y": "Apri opzioni di download precedenti",
-            "cert.rina.prevView": "Visualizza certificazione 2019",
-            "cert.rina.prevDownload": "Scarica certificazione 2019",
+            "cert.rina.body": "Siamo abilitati alla fornitura dei seguenti servizi a navi e altre unità classificate RINA: ispezioni e manutenzione di apparecchi ed impianti antincendio, limitatamente ad impianti fissi a CO2, estintori portatili ed estintori di grande capacità.",
+            "cert.vvf.title": "Tecnico manutentore qualificato",
+            "cert.vvf.body": "Il nostro tecnico è qualificato dal Dipartimento dei Vigili del Fuoco ai sensi del D.M. 1 settembre 2021 ed è iscritto all'albo nazionale dei manutentori per il presidio P.2, reti idranti antincendio. L'abilitazione ha validità quinquennale.",
             "cert.more.title": "Percorso di crescita continua",
-            "cert.more.body": "Continueremo a conseguire nuove certificazioni per migliorare come azienda e garantire standard sempre piu alti.",
-            "cert.viewFile": "Visualizza certificazione",
-            "cert.downloadFile": "Scarica",
+            "cert.more.body": "Continueremo a conseguire nuove certificazioni per migliorare come azienda e garantire standard sempre più alti.",
             "cert.ctaHome": "Torna alla home",
             "cert.ctaContact": "Contattaci",
-            "cert.quickActionsEyebrow": "Azioni rapide",
             "cert.quickActionsTitle": "Vuoi continuare la navigazione?",
             "cert.quickActionsBody": "Torna alla home oppure contattaci direttamente per qualsiasi informazione.",
-            "cert.homeEyebrow": "Certificazioni",
             "cert.homeTitle": "Le nostre certificazioni",
             "cert.homeBody": "Consulta tutte le certificazioni dell'azienda in un'unica pagina dedicata.",
             "cert.homeCta": "Apri pagina certificazioni",
@@ -185,16 +178,17 @@
             "hero.ctaServices": "Our services",
             "hero.ctaContact": "Get in touch",
 
-            "about.eyebrow": "About us",
             "about.title": "An Aeolian story, since 1997",
             "about.companyTitle": "The company",
             "about.companyBody": "Siel Eolie is an electrical contractor based in Lipari, active across the whole archipelago. We build civil and industrial systems, custom electrical switchboards, automations and wireless networks, photovoltaic installations and fire-safety systems. We work for private homes, hotels and hospitality venues, industrial sites, condominiums and public bodies: from the smallest call-out to the largest contract, always with top-quality materials and deadlines we actually keep. Our team follows every job from first idea to scheduled maintenance.",
             "about.historyTitle": "Our story",
-            "about.historyBody": "Siel was founded in Lipari in 2004 as the successor to S.I.EL snc, started in 1997 by our founder and current manager, Giuseppe Orto (Geometra). In more than twenty years we have watched the Aeolian Islands change, and we have grown with the territory. During the 2003 Stromboli emergency we worked alongside Italy's Civil Protection to bring electrical systems, video-surveillance and LAN cabling all the way up onto the active volcano: a demanding job that involved helicopter lifts, rope-access paths and high-altitude work. That spirit, being there where and when it matters, still guides us today.",
+            "about.historyBody": "Siel was founded in Lipari in 2004 as the successor to S.I.EL snc, started in 1997 by our founder and current manager, Giuseppe Orto (Geometra). In more than twenty years we have watched the Aeolian Islands change, and we have grown with the territory.",
             "about.certTitle": "Certifications",
-            "about.certBody": "Since 2014 we have been ICIM-certified for the maintenance of fire-safety systems, hydrant networks and fire doors: the only authorised provider of these services in Lipari and the smaller islands of the archipelago. ICIM certification guarantees compliance with current UNI standards and full traceability of every intervention, essential for hotels, public buildings, condominiums and any business subject to fire-safety inspection.",
+            "about.certBody": "Since 2014 we have been ICIM-certified for the maintenance of fire-safety systems, hydrant networks and fire doors: the only authorised provider of these services in Lipari and the smaller islands of the archipelago. ICIM certification guarantees compliance with current UNI standards and full traceability of every intervention, essential for hotels, public buildings, condominiums and any business subject to fire-safety inspection. Since 2026 our technician is also qualified by the Vigili del Fuoco for the maintenance of fire hydrant networks (presidio P.2).",
 
-            "services.eyebrow": "Services",
+            "story.marker": "Stromboli emergency",
+            "story.title": "Power and surveillance on an active volcano",
+            "story.body": "During the 2003 Stromboli emergency we worked alongside Italy's Civil Protection to bring electrical systems, video-surveillance and LAN cabling all the way up onto the active volcano. A demanding job of helicopter lifts, rope-access paths and high-altitude work. That spirit, being there where and when it matters, still guides us today.",
             "services.title": "What we do",
             "services.lead": "From design to maintenance: one contractor follows every stage of your system, with top-quality materials and deadlines we actually keep.",
             "services.electric.title": "Electrical systems",
@@ -211,7 +205,6 @@
             "services.automation.title": "Automation & networks",
             "services.automation.body": "Automation of gates and shutters, Wi-Fi and hyperlan networks, structured cabling and hardware support.",
 
-            "portfolio.eyebrow": "Portfolio",
             "portfolio.title": "Selected work",
             "portfolio.lead": "From private homes to worksites on the volcano: every project carries more than twenty years of hands-on experience.",
             "portfolio.tabs.all": "All",
@@ -219,17 +212,18 @@
             "portfolio.tabs.industriale": "Industrial",
             "portfolio.tabs.quadro": "Switchboards",
 
-            "contact.eyebrow": "Contact",
             "contact.title": "Let's talk",
             "contact.lead": "Reach out for a quote, a consultation or a maintenance call. We're based in Lipari, and we cover every one of the Aeolian Islands.",
             "contact.addressLabel": "Address",
             "contact.phoneFixedLabel": "Phone",
             "contact.phoneLabel": "Mobile",
             "contact.hoursLabel": "Hours",
+            "contact.adminTitle": "Administrative details",
             "contact.hoursValue": "Mon–Fri 09:00–13:00 / 15:00–19:00",
             "contact.mapTitle": "Map: Siel Eolie in Lipari",
-            "contact.mapConsentText": "By clicking «Load map» Google Maps may set third-party cookies.",
+            "contact.mapConsentText": "Showing the map requires loading Google Maps, which may set third-party cookies.",
             "contact.mapConsentBtn": "Load map",
+            "contact.mapOpenExternal": "Open in Google Maps",
 
             "cta.eyebrow": "Let's work together",
             "cta.title": "Got a project in mind?",
@@ -253,13 +247,13 @@
             "cookie.text": "We use Google Maps to show our location. The service may set third-party cookies.",
             "cookie.accept": "Accept",
             "cookie.decline": "Decline",
+            "cookie.manage": "Manage cookies",
 
             "a11y.toTop": "Back to top",
             "a11y.themeToggle": "Switch theme",
             "a11y.menuOpen": "Open menu",
             "a11y.menuClose": "Close menu",
             "a11y.skipToMain": "Skip to main content",
-            "theme.toggleShort": "Theme",
             "theme.toggleLabel": "Switch theme",
 
             "nf.metaTitle": "Page not found | Siel Eolie",
@@ -275,24 +269,16 @@
             "cert.activeSince": "Active since",
             "cert.icim.title": "ICIM Certification",
             "cert.icim.body": "Since 2014 we have been certified for the maintenance of fire-safety systems, hydrant networks, and fire doors. In Lipari and the smaller islands, we are the only authorised provider for these services.",
-            "cert.icim.tag": "Active since 2014",
             "cert.rina.title": "RINA Certification",
             "cert.rina.body": "We are qualified to provide the following services to ships and other units classed by RINA: inspection and maintenance of fire-fighting appliances and systems, limited to fixed CO2 systems, portable extinguishers, and wheeled extinguishers (large capacity).",
-            "cert.rina.tag": "Active since 2019",
-            "cert.rina.menuA11y": "Open previous certification options",
-            "cert.rina.downloadMenuA11y": "Open previous download options",
-            "cert.rina.prevView": "View 2019 certificate",
-            "cert.rina.prevDownload": "Download 2019 certificate",
+            "cert.vvf.title": "Qualified maintenance technician",
+            "cert.vvf.body": "Our technician is qualified by the Italian Fire and Rescue Service (Vigili del Fuoco) under the Ministerial Decree of 1 September 2021 and is listed in the national register of maintenance technicians for presidio P.2, fire hydrant networks. The qualification is valid for five years.",
             "cert.more.title": "Continuous growth path",
             "cert.more.body": "We will continue pursuing new certifications to improve as a company and ensure ever higher standards.",
-            "cert.viewFile": "View certificate",
-            "cert.downloadFile": "Download",
             "cert.ctaHome": "Back to home",
             "cert.ctaContact": "Contact us",
-            "cert.quickActionsEyebrow": "Quick actions",
             "cert.quickActionsTitle": "Would you like to continue browsing?",
             "cert.quickActionsBody": "Return to the homepage or contact us directly for any information.",
-            "cert.homeEyebrow": "Certifications",
             "cert.homeTitle": "Our certifications",
             "cert.homeBody": "See all company certifications on one dedicated page.",
             "cert.homeCta": "Open certifications page"
@@ -776,14 +762,25 @@
         var dialog = document.getElementById('lightbox');
         if (!dialog) return;
 
-        var items = Array.from(document.querySelectorAll('.portfolio-item'));
-        if (!items.length) return;
+        // Each [data-lightbox] container is its own gallery, so paging with the
+        // arrows stays inside the set the user actually clicked into.
+        var groups = Array.prototype.map.call(
+            document.querySelectorAll('[data-lightbox]'),
+            function (container) {
+                return Array.prototype.filter.call(container.children, function (el) {
+                    return el.tagName === 'FIGURE' && el.querySelector('img');
+                });
+            }
+        ).filter(function (group) { return group.length; });
+
+        if (!groups.length) return;
 
         var lbImg = dialog.querySelector('.lightbox-img');
         var lbCaption = dialog.querySelector('.lightbox-caption');
         var closeBtn = dialog.querySelector('.lightbox-close');
         var prevBtn = dialog.querySelector('.lightbox-prev');
         var nextBtn = dialog.querySelector('.lightbox-next');
+        var items = [];
         var currentIndex = -1;
 
         function openAt(index) {
@@ -794,7 +791,8 @@
             lbImg.src = itemImg.getAttribute('src');
             lbImg.alt = itemImg.alt;
             if (lbCaption) lbCaption.textContent = itemImg.alt;
-            dialog.showModal();
+            // Older engines throw if showModal() is called on an open dialog.
+            if (!dialog.open) dialog.showModal();
         }
 
         function closeDialog() {
@@ -814,17 +812,25 @@
             openAt(idx);
         }
 
-        items.forEach(function (item, index) {
-            item.setAttribute('tabindex', '0');
-            item.setAttribute('role', 'button');
-            var itemImg = item.querySelector('img');
-            if (itemImg) item.setAttribute('aria-label', itemImg.alt);
-            item.addEventListener('click', function () { openAt(index); });
-            item.addEventListener('keydown', function (ev) {
-                if (ev.key === 'Enter' || ev.key === ' ') {
-                    ev.preventDefault();
+        groups.forEach(function (group) {
+            group.forEach(function (item, index) {
+                item.setAttribute('tabindex', '0');
+                item.setAttribute('role', 'button');
+                var itemImg = item.querySelector('img');
+                if (itemImg) item.setAttribute('aria-label', itemImg.alt);
+
+                function open() {
+                    items = group;
                     openAt(index);
                 }
+
+                item.addEventListener('click', open);
+                item.addEventListener('keydown', function (ev) {
+                    if (ev.key === 'Enter' || ev.key === ' ') {
+                        ev.preventDefault();
+                        open();
+                    }
+                });
             });
         });
 
@@ -843,6 +849,87 @@
     }
 
     // ------------------------------------------------------------------
+    // Section spy — marks the nav link for the section currently in view.
+    // Sub-pages carry a static aria-current="page" instead, so this only
+    // runs where in-page section anchors exist.
+    // ------------------------------------------------------------------
+    function initSectionSpy() {
+        if (!('IntersectionObserver' in window)) return;
+
+        var links = {};
+        var targets = [];
+
+        document.querySelectorAll('.nav-links a[href*="#"]').forEach(function (link) {
+            var href = link.getAttribute('href') || '';
+            var id = href.slice(href.indexOf('#') + 1);
+            if (!id) return;
+            var section = document.getElementById(id);
+            if (!section) return;
+            links[id] = link;
+            targets.push(section);
+        });
+
+        if (!targets.length) return;
+
+        var visible = Object.create(null);
+
+        function render() {
+            var top = null;
+            targets.forEach(function (section) {
+                if (!visible[section.id]) return;
+                if (top === null || section.getBoundingClientRect().top < top.getBoundingClientRect().top) {
+                    top = section;
+                }
+            });
+            Object.keys(links).forEach(function (id) {
+                if (top && id === top.id) {
+                    links[id].setAttribute('aria-current', 'location');
+                } else {
+                    links[id].removeAttribute('aria-current');
+                }
+            });
+        }
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                visible[entry.target.id] = entry.isIntersecting;
+            });
+            render();
+        }, {
+            // Discount the sticky header, and only count a section once it
+            // occupies a meaningful slice of the viewport.
+            rootMargin: '-' + (document.querySelector('header') || { offsetHeight: 72 }).offsetHeight + 'px 0px -55% 0px'
+        });
+
+        targets.forEach(function (section) { observer.observe(section); });
+    }
+
+    // ------------------------------------------------------------------
+    // Consent withdrawal — only offered once a choice has been stored.
+    // ------------------------------------------------------------------
+    function initConsentReset() {
+        var btn = document.getElementById('cookieReset');
+        if (!btn) return;
+
+        var stored = false;
+        try {
+            stored = !!(localStorage.getItem('cookieConsent') || localStorage.getItem('mapConsent'));
+        } catch (e) {}
+        if (!stored) return;
+
+        btn.hidden = false;
+        btn.addEventListener('click', function () {
+            try {
+                localStorage.removeItem('cookieConsent');
+                localStorage.removeItem('mapConsent');
+            } catch (e) {}
+            // Reload so an already-injected Maps iframe is genuinely torn down
+            // rather than just hidden.
+            window.location.reload();
+        });
+    }
+
+    // ------------------------------------------------------------------
     // Boot
     // ------------------------------------------------------------------
     function boot() {
@@ -855,7 +942,9 @@
         initToTop();
         initMapConsent();
         initCookieBanner();
+        initConsentReset();
         initLightbox();
+        initSectionSpy();
         updateMenuToggleA11y(initialLanguage());
         setLanguage(initialLanguage());
     }

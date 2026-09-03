@@ -1,0 +1,56 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "language": "en",
+  "dictionaryDefinitions": [
+    {
+      "name": "sieleolie-project",
+      "path": "./.cspell/project-words.txt",
+      "addWords": true,
+      "description": "Brand, people, Aeolian place names, certification bodies, build/web terms."
+    },
+    {
+      "name": "sieleolie-italian",
+      "path": "./.cspell/italian-words.txt",
+      "addWords": true,
+      "description": "Italian vocabulary used in the site's IT copy."
+    }
+  ],
+  "dictionaries": [
+    "sieleolie-project",
+    "sieleolie-italian",
+    "html",
+    "css",
+    "softwareTerms",
+    "companies",
+    "filetypes",
+    "bash",
+    "python"
+  ],
+  "ignorePaths": [
+    ".git/**",
+    ".claude/**",
+    ".vscode/**",
+    "node_modules/**",
+    "/index.html",
+    "/404.html",
+    "/certifications/**",
+    "source/**/*.min.*",
+    "source/fonts/**",
+    "source/img/**",
+    "*.svg",
+    "*.woff2",
+    "*.webp",
+    "*.png",
+    "*.ico",
+    "*.pdf"
+  ],
+  "ignoreRegExpList": [
+    "Urls",
+    "Base64",
+    "SHA",
+    "HexValues",
+    "RGBHex",
+    "CommitHash"
+  ]
+}

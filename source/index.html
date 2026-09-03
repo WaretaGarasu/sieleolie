@@ -135,19 +135,42 @@
             "Porte tagliafuoco",
             "Certificazione ICIM antincendio",
             "Certificazione RINA navale",
+            "Tecnico manutentore qualificato VV.F. reti idranti",
             "Impianti fotovoltaici",
             "Automazioni cancelli e serrande",
             "Reti wireless e hyperlan",
             "Impianti elettrici Isole Eolie",
             "Elettricista Lipari"
         ],
-        "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "certification",
-            "name": "Certificazione ICIM",
-            "recognizedBy": { "@type": "Organization", "name": "ICIM S.p.A." },
-            "description": "Manutenzione di impianti antincendio, reti idranti e porte tagliafuoco (dal 2014)"
-        }
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "certification",
+                "name": "Certificazione ICIM",
+                "recognizedBy": { "@type": "Organization", "name": "ICIM S.p.A." },
+                "validFrom": "2014",
+                "description": "Manutenzione di impianti antincendio, reti idranti e porte tagliafuoco (dal 2014)"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "certification",
+                "name": "Certificazione RINA",
+                "recognizedBy": { "@type": "Organization", "name": "RINA S.p.A." },
+                "validFrom": "2019",
+                "description": "Ispezioni e manutenzione di apparecchi ed impianti antincendio su navi e unità classificate RINA (dal 2019)"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "professional qualification",
+                "name": "Tecnico manutentore qualificato",
+                "recognizedBy": {
+                    "@type": "GovernmentOrganization",
+                    "name": "Corpo Nazionale dei Vigili del Fuoco"
+                },
+                "validFrom": "2026",
+                "description": "Qualifica ai sensi del D.M. 1 settembre 2021 per il presidio antincendio P.2, reti idranti"
+            }
+        ]
     }
     </script>
 </head>
@@ -236,7 +259,6 @@
     <!-- CHI SIAMO -->
     <section id="chi-siamo" class="section">
         <div class="container">
-            <p class="eyebrow" data-i18n="about.eyebrow">Chi siamo</p>
             <h2 data-i18n="about.title">Una storia eoliana, dal 1997</h2>
 
             <div class="about-grid">
@@ -260,12 +282,7 @@
                         Siel nasce a Lipari nel 2004, erede della S.I.EL snc avviata nel 1997 dal
                         fondatore e attuale amministratore, Geometra Giuseppe Orto. In oltre
                         vent'anni abbiamo visto cambiare le Eolie e siamo cresciuti insieme al
-                        territorio. Durante l'Emergenza Stromboli del 2003 abbiamo lavorato a
-                        fianco della Protezione Civile per portare impianti elettrici,
-                        videosorveglianza e cablaggio della rete LAN fin sul vulcano in attività:
-                        un intervento complesso, fatto di trasporti in elicottero, sentieri
-                        attrezzati e lavori in quota. Quello spirito, esserci dove serve
-                        quando serve, ci guida ancora oggi.
+                        territorio.
                     </p>
                 </div>
 
@@ -278,9 +295,48 @@
                         certificazione ICIM garantisce il rispetto delle normative UNI e la
                         tracciabilità di ogni intervento, requisito fondamentale per alberghi,
                         strutture pubbliche, condomini e qualsiasi attività soggetta a controllo
-                        antincendio.
+                        antincendio. Dal 2026 il nostro tecnico è inoltre qualificato dai Vigili
+                        del Fuoco per la manutenzione delle reti idranti antincendio (presidio P.2).
                     </p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STROMBOLI 2003 -->
+    <section class="story" aria-labelledby="storyTitle">
+        <div class="container story-inner">
+            <div class="story-text">
+                <p class="story-marker">
+                    <span data-i18n="story.marker">Emergenza Stromboli</span>
+                    <time datetime="2003">2003</time>
+                </p>
+                <h2 id="storyTitle" class="story-title" data-i18n="story.title">Corrente e videosorveglianza sul vulcano in attività</h2>
+                <p class="story-body" data-i18n="story.body">
+                    Durante l'Emergenza Stromboli del 2003 abbiamo lavorato a fianco della Protezione
+                    Civile per portare impianti elettrici, videosorveglianza e cablaggio della rete LAN
+                    fin sul vulcano in attività. Un intervento complesso, fatto di trasporti in
+                    elicottero, sentieri attrezzati e lavori in quota. Quello spirito, esserci dove
+                    serve quando serve, ci guida ancora oggi.
+                </p>
+            </div>
+
+            <div class="story-figures" data-lightbox>
+                <figure>
+                    <img src="/source/img/portfolio/industriale_01.webp"
+                         alt="Squadra di lavoro con elicottero Lama SA 315B in quota"
+                         width="720" height="550" loading="lazy" decoding="async" />
+                </figure>
+                <figure>
+                    <img src="/source/img/portfolio/industriale_03.webp"
+                         alt="Elicottero in volo con carico sospeso per trasporto materiali"
+                         width="720" height="550" loading="lazy" decoding="async" />
+                </figure>
+                <figure>
+                    <img src="/source/img/portfolio/industriale_02.webp"
+                         alt="Tecnico in arrampicata con scala su terreno vulcanico"
+                         width="720" height="550" loading="lazy" decoding="async" />
+                </figure>
             </div>
         </div>
     </section>
@@ -288,7 +344,6 @@
     <!-- SERVIZI -->
     <section id="servizi" class="section section-soft">
         <div class="container">
-            <p class="eyebrow" data-i18n="services.eyebrow">Servizi</p>
             <h2 data-i18n="services.title">Cosa facciamo</h2>
             <p class="section-lead" data-i18n="services.lead">
                 Dalla progettazione alla manutenzione: un'unica impresa che segue ogni fase del
@@ -371,7 +426,6 @@
         <div class="container">
             <div class="cert-promo-inner">
                 <div class="cert-promo-text">
-                    <p class="eyebrow cert-promo-eyebrow" data-i18n="cert.homeEyebrow">Certificazioni</p>
                     <h2 id="certPromoTitle" data-i18n="cert.homeTitle">Le nostre certificazioni</h2>
                     <p class="cert-promo-body" data-i18n="cert.homeBody">Consulta tutte le certificazioni dell'azienda in un'unica pagina dedicata.</p>
                 </div>
@@ -385,7 +439,6 @@
     <!-- PORTFOLIO -->
     <section id="portfolio" class="section">
         <div class="container">
-            <p class="eyebrow" data-i18n="portfolio.eyebrow">Portfolio</p>
             <h2 data-i18n="portfolio.title">Alcune delle nostre realizzazioni</h2>
             <p class="section-lead" data-i18n="portfolio.lead">
                 Dalle abitazioni private ai cantieri sul vulcano: ogni progetto racconta
@@ -399,16 +452,16 @@
                 <button type="button" class="filter" data-filter="quadro" aria-pressed="false" data-i18n="portfolio.tabs.quadro">Quadri elettrici</button>
             </div>
 
-            <div class="portfolio-grid">
+            <div class="portfolio-grid" data-lightbox>
                 <figure class="portfolio-item" data-cat="quadro">
                     <img
                         srcset="/source/img/portfolio/quadro_01-480.webp 480w,
                                 /source/img/portfolio/quadro_01-800.webp 800w,
-                                /source/img/portfolio/quadro_01.webp 1152w"
+                                /source/img/portfolio/quadro_01.webp 1536w"
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/quadro_01.webp"
                         alt="Quadro elettrico BTicino moderno con multimetro e interruttori differenziali"
-                        loading="lazy" decoding="async" />
+                        width="1536" height="2048" loading="lazy" decoding="async" />
                 </figure>
                 <figure class="portfolio-item" data-cat="quadro">
                     <img
@@ -417,7 +470,7 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/quadro_02.webp"
                         alt="Quadro di piano con multimetro contatore e interruttori etichettati"
-                        loading="lazy" decoding="async" />
+                        width="720" height="550" loading="lazy" decoding="async" />
                 </figure>
                 <figure class="portfolio-item" data-cat="quadro">
                     <img
@@ -426,7 +479,7 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/quadro_03.webp"
                         alt="Quadro industriale con teleruttori e relè su piastra rossa"
-                        loading="lazy" decoding="async" />
+                        width="720" height="550" loading="lazy" decoding="async" />
                 </figure>
                 <figure class="portfolio-item" data-cat="quadro">
                     <img
@@ -435,7 +488,7 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/quadro_04.webp"
                         alt="Quadro elettrico civile con interruttori differenziali"
-                        loading="lazy" decoding="async" />
+                        width="720" height="550" loading="lazy" decoding="async" />
                 </figure>
 
                 <figure class="portfolio-item" data-cat="industriale">
@@ -445,7 +498,7 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/industriale_01.webp"
                         alt="Squadra di lavoro con elicottero Lama SA 315B in quota"
-                        loading="lazy" decoding="async" />
+                        width="720" height="550" loading="lazy" decoding="async" />
                 </figure>
                 <figure class="portfolio-item" data-cat="industriale">
                     <img
@@ -454,7 +507,7 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/industriale_02.webp"
                         alt="Tecnico in arrampicata con scala su terreno vulcanico"
-                        loading="lazy" decoding="async" />
+                        width="720" height="550" loading="lazy" decoding="async" />
                 </figure>
                 <figure class="portfolio-item" data-cat="industriale">
                     <img
@@ -463,7 +516,7 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/industriale_03.webp"
                         alt="Elicottero in volo con carico sospeso per trasporto materiali"
-                        loading="lazy" decoding="async" />
+                        width="720" height="550" loading="lazy" decoding="async" />
                 </figure>
                 <figure class="portfolio-item" data-cat="industriale">
                     <img
@@ -472,7 +525,7 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/industriale_04.webp"
                         alt="Tecnico su sentiero attrezzato con corde fisse su roccia vulcanica"
-                        loading="lazy" decoding="async" />
+                        width="720" height="550" loading="lazy" decoding="async" />
                 </figure>
                 <figure class="portfolio-item" data-cat="industriale">
                     <img
@@ -481,7 +534,7 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/industriale_05.webp"
                         alt="Intervento su antenna e palo radio con tiranti"
-                        loading="lazy" decoding="async" />
+                        width="720" height="550" loading="lazy" decoding="async" />
                 </figure>
                 <figure class="portfolio-item" data-cat="industriale">
                     <img
@@ -490,7 +543,7 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/industriale_06.webp"
                         alt="Posa cavi elettrici in trincea su costone con vista mare"
-                        loading="lazy" decoding="async" />
+                        width="720" height="550" loading="lazy" decoding="async" />
                 </figure>
                 <figure class="portfolio-item" data-cat="industriale">
                     <img
@@ -499,7 +552,7 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/industriale_07.webp"
                         alt="Impianto elettrico a servizio di cava e impianto di frantumazione"
-                        loading="lazy" decoding="async" />
+                        width="720" height="550" loading="lazy" decoding="async" />
                 </figure>
 
                 <figure class="portfolio-item" data-cat="civile">
@@ -510,7 +563,7 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/civile_01.webp"
                         alt="Quadro elettrico residenziale BTicino con circuiti etichettati (forno, lavastoviglie, piastra, luci)"
-                        loading="lazy" decoding="async" />
+                        width="1152" height="2048" loading="lazy" decoding="async" />
                 </figure>
                 <figure class="portfolio-item" data-cat="civile">
                     <img
@@ -519,8 +572,98 @@
                         sizes="(max-width: 560px) 100vw, (max-width: 960px) 50vw, 33vw"
                         src="/source/img/portfolio/civile_02.webp"
                         alt="Scavo e posa cavi elettrici di alimentazione edificio residenziale"
-                        loading="lazy" decoding="async" />
+                        width="720" height="550" loading="lazy" decoding="async" />
                 </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" class="section section-soft">
+        <div class="container">
+            <h2 data-i18n="contact.title">Parliamone</h2>
+            <p class="section-lead" data-i18n="contact.lead">
+                Contattaci per un preventivo, una consulenza o un intervento di manutenzione.
+                Siamo a Lipari e raggiungiamo tutte le Isole Eolie.
+            </p>
+
+            <div class="contact-grid">
+
+                <div class="contact-details">
+    <ul class="contact-info">
+                        <li>
+                            <div class="ci-icon" aria-hidden="true">
+                                <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M10 18h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                            </div>
+                            <div>
+                                <div class="ci-label" data-i18n="contact.phoneLabel">Cellulare</div>
+                                <div class="ci-value"><a href="tel:+393683287898">+39 368 328 7898</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ci-icon" aria-hidden="true">
+                                <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><path d="M6 4h4l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
+                            </div>
+                            <div>
+                                <div class="ci-label" data-i18n="contact.phoneFixedLabel">Telefono</div>
+                                <div class="ci-value"><a href="tel:+390909813440">090 981 3440</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ci-icon" aria-hidden="true">
+                                <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8" /></svg>
+                            </div>
+                            <div>
+                                <div class="ci-label">Email</div>
+                                <div class="ci-value"><a href="mailto:info@sieleolie.it">info@sieleolie.it</a></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ci-icon" aria-hidden="true">
+                                <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8z" fill="none" stroke="currentColor" stroke-width="1.8" /><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8" /></svg>
+                            </div>
+                            <div>
+                                <div class="ci-label" data-i18n="contact.addressLabel">Indirizzo</div>
+                                <div class="ci-value">Corso Vittorio Emanuele II, 247<br />98055 Lipari (ME)</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="ci-icon" aria-hidden="true">
+                                <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" /></svg>
+                            </div>
+                            <div>
+                                <div class="ci-label" data-i18n="contact.hoursLabel">Orari</div>
+                                <div class="ci-value" data-i18n="contact.hoursValue">Lun–Ven 09:00–13:00 / 15:00–19:00</div>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="contact-admin">
+                        <p class="contact-admin-title" data-i18n="contact.adminTitle">Dati amministrativi</p>
+                        <dl>
+                            <dt>PEC</dt>
+                            <dd><a href="mailto:info@pec.sieleolie.com">info@pec.sieleolie.com</a></dd>
+                            <dt>Fax</dt>
+                            <dd>+39 178 441 3669</dd>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="map-wrapper map-consent" id="mapWrapper" data-map-src="https://www.google.com/maps?q=Corso+Vittorio+Emanuele+II+247,+98055+Lipari+ME&output=embed">
+                    <div class="map-consent-inner">
+                        <svg class="map-consent-icon" aria-hidden="true" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+                        <p class="map-consent-address">Corso Vittorio Emanuele II, 247<br />98055 Lipari (ME)</p>
+                        <p class="map-consent-text" data-i18n="contact.mapConsentText">Per visualizzare la mappa è necessario caricare Google Maps, che potrebbe impostare cookie di terze parti.</p>
+                        <div class="map-consent-actions">
+                            <button type="button" class="btn btn-secondary" id="mapConsentBtn" data-i18n="contact.mapConsentBtn">Carica mappa</button>
+                            <a class="map-consent-link" href="https://www.google.com/maps/search/?api=1&amp;query=Corso%20Vittorio%20Emanuele%20II%20247%2C%2098055%20Lipari%20ME" target="_blank" rel="noopener">
+                                <span data-i18n="contact.mapOpenExternal">Apri in Google Maps</span>
+                                <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="14" height="14"><path d="M14 4h6v6M20 4l-8.5 8.5M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" /></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -556,96 +699,6 @@
         </div>
     </section>
 
-    <!-- CONTATTI -->
-    <section id="contatti" class="section section-soft">
-        <div class="container">
-            <p class="eyebrow" data-i18n="contact.eyebrow">Contatti</p>
-            <h2 data-i18n="contact.title">Parliamone</h2>
-            <p class="section-lead" data-i18n="contact.lead">
-                Contattaci per un preventivo, una consulenza o un intervento di manutenzione.
-                Siamo a Lipari e raggiungiamo tutte le Isole Eolie.
-            </p>
-
-            <div class="contact-grid">
-
-                <ul class="contact-info">
-                    <li>
-                        <div class="ci-icon" aria-hidden="true">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><path d="M12 2a8 8 0 0 0-8 8c0 6 8 12 8 12s8-6 8-12a8 8 0 0 0-8-8z" fill="none" stroke="currentColor" stroke-width="1.8" /><circle cx="12" cy="10" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8" /></svg>
-                        </div>
-                        <div>
-                            <div class="ci-label" data-i18n="contact.addressLabel">Indirizzo</div>
-                            <div class="ci-value">Corso Vittorio Emanuele II, 247<br />98055 Lipari (ME)</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ci-icon" aria-hidden="true">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><path d="M6 4h4l2 5-2 1a12 12 0 0 0 6 6l1-2 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 4 6a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
-                        </div>
-                        <div>
-                            <div class="ci-label" data-i18n="contact.phoneFixedLabel">Telefono</div>
-                            <div class="ci-value"><a href="tel:+390909813440">090 981 3440</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ci-icon" aria-hidden="true">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><rect x="7" y="2" width="10" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M10 18h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
-                        </div>
-                        <div>
-                            <div class="ci-label" data-i18n="contact.phoneLabel">Cellulare</div>
-                            <div class="ci-value"><a href="tel:+393683287898">+39 368 328 7898</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ci-icon" aria-hidden="true">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="1.8" /></svg>
-                        </div>
-                        <div>
-                            <div class="ci-label">Email</div>
-                            <div class="ci-value"><a href="mailto:info@sieleolie.it">info@sieleolie.it</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ci-icon" aria-hidden="true">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M7 5V3h10v2M7 15h10M7 19h6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" /></svg>
-                        </div>
-                        <div>
-                            <div class="ci-label">PEC</div>
-                            <div class="ci-value"><a href="mailto:info@pec.sieleolie.com">info@pec.sieleolie.com</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ci-icon" aria-hidden="true">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><rect x="6" y="4" width="12" height="6" fill="none" stroke="currentColor" stroke-width="1.8" /><rect x="3" y="10" width="18" height="8" rx="1" fill="none" stroke="currentColor" stroke-width="1.8" /><rect x="6" y="18" width="12" height="3" fill="none" stroke="currentColor" stroke-width="1.8" /></svg>
-                        </div>
-                        <div>
-                            <div class="ci-label">Fax</div>
-                            <div class="ci-value">+39 178 441 3669</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ci-icon" aria-hidden="true">
-                            <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false" width="20" height="20"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" /></svg>
-                        </div>
-                        <div>
-                            <div class="ci-label" data-i18n="contact.hoursLabel">Orari</div>
-                            <div class="ci-value" data-i18n="contact.hoursValue">Lun–Ven 09:00–13:00 / 15:00–19:00</div>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="map-wrapper map-consent" id="mapWrapper" data-map-src="https://www.google.com/maps?q=Corso+Vittorio+Emanuele+II+247,+98055+Lipari+ME&output=embed">
-                    <div class="map-consent-inner">
-                        <svg class="map-consent-icon" aria-hidden="true" viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-                        <p class="map-consent-text" data-i18n="contact.mapConsentText">Per visualizzare la mappa è necessario caricare Google Maps, che potrebbe impostare cookie di terze parti.</p>
-                        <button type="button" class="btn btn-secondary" id="mapConsentBtn" data-i18n="contact.mapConsentBtn">Carica mappa</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
 </main>
 
 <footer>
@@ -670,6 +723,7 @@
                 © <span id="year"></span>
                 <span data-i18n="brand.name">Siel Eolie</span>.
                 <span data-i18n="footer.rights">Tutti i diritti riservati.</span>
+                <button type="button" class="cookie-reset" id="cookieReset" hidden data-i18n="cookie.manage">Gestisci cookie</button>
             </div>
             <div class="footer-signature">
                 <span data-i18n="footer.built">Fatto con</span>
