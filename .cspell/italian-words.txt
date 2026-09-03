@@ -8,6 +8,7 @@
 abbiamo
 abilitata
 abilitati
+abilitazione
 abilitazioni
 abitazioni
 accetta
@@ -182,6 +183,7 @@ inviaci
 inviato
 invio
 iscritto
+iscrizione
 isole
 ispezioni
 l'abilitazione
@@ -288,6 +290,7 @@ richiesta
 ridurre
 rifiuta
 riflette
+rilasciata
 riprova
 riservati
 rispettati
